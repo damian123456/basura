@@ -48,7 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\scripts\movimiento_jugador.cs" />
  <Reference Include="Assembly-UnityScript-firstpass">
- <HintPath>C:/Users/Fede/Desktop/personaje_prueba/personaje_prueba_source/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ <HintPath>C:/Users/Fede/repo_basura/basura/2015/unity/personaje_prueba_source/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
