@@ -1,0 +1,149 @@
+/* FOOTER =================================================== */
+.container-footer-1, .container-footer-2, .container-footer-3 {
+	padding-bottom: @margen;
+	padding-top: @margen;
+}
+.container-footer-1 {
+	background: @color-footer-1 url(../img/bkg-footer.png) repeat-x top;
+	border-bottom: 5px solid @body-bg;
+	text-align: center;
+	.titulo {
+		font-style: italic;
+		font-weight: bold;
+	}
+	ul {
+		list-style: none;
+		padding-left: 0;
+		li > a:hover {
+			color: @hover-footer;
+			font-weight: bold;
+		}
+	}
+}
+.container-footer-2 {
+	background: @brand-primary;
+	color: white;
+	text-align: center;
+	a {
+		color: white;
+		&:hover {
+			font-weight: bold;
+		}
+	}
+	p {
+		margin-bottom: 0;
+	}
+	.titulo, .tel {
+		font-size: 16px;
+		font-weight: bold;
+		margin-bottom: 0;
+		text-transform: uppercase;
+	}
+	.titulo {
+		margin: 20px 0 10px 0;
+	}
+	.tel {
+		font-size: 24px;
+	}
+}
+.container-footer-3 {
+	background: @gray-darker;
+	color: white;
+	font-size: 13px;
+	text-align: center;
+	a {
+		color: white;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+.franja-verde, .franja-verde-oscuro, .franja-petroleo, .franja-magenta, .franja-violeta, .franja-rojo, .franja-naranja {
+	background: @verde;
+	float: left;
+	height: 10px;
+	width: 14%;
+}
+.franja-verde-oscuro {
+	background: @verde-oscuro;
+}
+.franja-petroleo {
+	background: @petroleo;
+	width: 15%;
+}
+.franja-magenta {
+	background: @magenta;
+}
+.franja-violeta {
+	background: @violeta;
+	width: 15%;
+}
+.franja-rojo {
+	background: @rojo;
+}
+.franja-naranja {
+	background: @naranja;
+}
+.in-blogs:before {
+	content: url(../img/blogger.png);
+	display: inline-block;
+	margin-right: 5px;
+	vertical-align: middle;
+}
+// 768px
+@media (min-width: 768px) {
+	.container-footer-1 {
+		padding-bottom: (@margen * 3);
+		padding-top: (@margen * 3);
+		.border-right {
+			border-right: 1px solid @border-footer;
+		}
+		h3 {
+			margin-top: 0;
+		}
+	}
+	
+	.container-footer-2 {
+		text-align: left;
+		p {
+			font-size: 13px;
+		}
+		.titulo {
+			margin: 0;
+			margin-bottom: 5px;
+		}
+		.padding-left {
+			padding-left: 50px;
+		}
+	}
+	.container-footer-3 {
+		text-align: left;
+		.firma {
+			text-align: right;
+		}
+	}
+}
+
+// 992px
+@media (min-width: 992px) {
+	.container-footer-2 {
+		padding-bottom: (@margen * 3);
+		padding-top: (@margen * 3);
+		p {
+			font-size: 16px;
+		}
+		.padding-left {
+			padding-left: 120px;
+		}
+	}
+}
+
+// 1200px
+@media (min-width: 1200px) {
+
+}
+
+// 1400px
+@media (min-width: 1400px) {
+
+}

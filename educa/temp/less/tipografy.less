@@ -1,0 +1,64 @@
+/* Typography =================================================== */
+
+.titulo-seccion, .subtitulo, .titulo-seccion-tn {
+	font-style: italic;
+	font-weight: bold;	
+}
+.titulo-seccion, .titulo-seccion-tn {
+	font-size: 20px;
+
+	margin: (@margen * 1.5) 0 @margen 0;
+	&.in-libreria {
+		margin-bottom: 20px;
+	}
+}
+
+.bajada {
+	margin-bottom: (@margen * 3);
+}
+.bajada-tn {
+	margin-bottom: (@margen * 1.5);
+	span {
+		font-family: @font-family-serif;
+	}
+}
+.subtitulo {
+	font-size: 18px;
+	margin-bottom: (@margen * 2);
+}
+.consultas {
+	font-size: 16px;
+	margin: (@margen * 3) 0 (@margen * 3) 0;
+}
+.bajada-tn-bold {
+	font-style: italic;
+	font-weight: bold;
+}
+// 768px
+@media only screen and (min-width: 768px) {
+	.titulo-seccion, .titulo-seccion-tn {
+		font-size: 30px;
+	}
+	.bajada, .bajada-tn {
+		font-size: 16px;
+	}
+	.subtitulo {
+		font-size: 22px;
+	}
+}
+
+// 992px
+@media only screen and (min-width: 992px) {
+	.titulo-seccion {
+		font-size: 40px;
+	}
+	.titulo-seccion-tn {
+		font-size: 32px;
+	}
+}
+
+// 1200px
+@media only screen and (min-width: 1200px) {
+
+}
+

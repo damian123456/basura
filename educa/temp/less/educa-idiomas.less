@@ -1,0 +1,86 @@
+/* Educa Idiomas =================================================== */
+.container-educa-idiomas {
+	padding-bottom: @margen * 2;
+	padding-top: @margen * 2;
+	position: relative;
+	z-index: 8888;
+	p {
+		font-family: @font-family-serif;
+		font-size: 20px;
+		margin-bottom: 5px;
+		margin-top: 20px;
+		text-transform: uppercase;
+	}
+	span {
+		font-family: @font-family-sans-serif;
+		font-size: 20px;
+		font-weight: bold;
+		line-height: 29px;
+	}
+}
+.bkg-color-body {
+	background: @body-bg;
+}
+.container-iframe {
+	background: url(../img/bkg-iframe-mobile.png) no-repeat center center;
+	height: 193px;
+	margin: 0 auto;
+	padding: 20px;
+	width: 300px;
+	iframe {
+		height: 150px;
+		width: 100%;
+	}
+}
+
+// 768px
+@media (min-width: 768px) {
+	.container-educa-idiomas {
+		p, span {
+			display: block;
+			margin-left: 10px;
+		}
+		span {
+			font-size: 14px;
+		}
+	}
+	.container-iframe {
+		background: url(../img/bkg-iframe-tablet.png) no-repeat center center;
+		height: 226px;
+		width: 350px;
+		iframe {
+			height: 180px;
+		}
+	}
+}
+
+// 992px
+@media (min-width: 992px) {
+	.container-educa-idiomas {
+		p, span {;
+			margin-left: 40px;
+		}
+		span {
+			font-size: 18px;
+		}
+	}
+	.container-iframe {
+		background: url(../img/bkg-iframe.png) no-repeat center center;
+		height: 301px;
+		padding: 25px;
+		width: 467px;
+		iframe {
+			height: 240px;
+		}
+	}
+}
+
+// 1200px
+@media (min-width: 1200px) {
+
+}
+
+// 1400px
+@media (min-width: 1400px) {
+
+}

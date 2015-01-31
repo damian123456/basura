@@ -1,0 +1,301 @@
+// SLIDER
+
+.container-caption {
+	color: white;
+	font-family: 'Asap', sans-serif;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	.point {
+		display: none!important;
+	}
+	.caption {
+		background: rgba(0, 0, 0, 0.5); 
+		padding: 10px;
+		text-align: center;
+	}
+	p {
+		font-size: 17px;
+		font-style: italic;
+	}
+	span {
+		display: none;
+	}
+}
+
+
+// EN EMPRESAS
+.flexslider-cursos {
+	margin-top: 35px!important;
+}
+.container-caption-empresas {
+	background: rgba(0, 0, 0, 0.5);
+	bottom: 0px;
+	color: white;
+	font-style: italic;
+	padding: 10px 0;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	width: 100%;
+}
+
+// EN CURSOS
+.container-slider-cursos {
+	margin-top: 40px;
+}
+.container-caption-cursos {
+	background: @brand-primary;
+	color: white;
+	font-size: 16px;
+	font-style: italic;
+	padding: 20px;
+	text-align: center;
+	width: 100%;
+	.btn-franquicias {
+		background: #fde019;
+		border: 3px solid #3b9b42;
+		color: #15456d;
+		font-size: 18px;
+		padding: 10px 20px;
+		margin: 20px 0 0 0px;
+	}
+}
+.flexslider-cursos {
+	margin-bottom: 50px!important;
+	.flex-control-nav {
+		position: absolute;
+		right:0!important;
+		text-align: center;
+		top: auto;
+		bottom: -30px;
+		width: 100%;    
+	}
+}
+// 768px
+@media (min-width: 768px) {
+	.container-caption {
+		bottom: 50px;
+		left: 10px;
+		.point {
+			bottom: 3px;
+			display: block!important;
+			position: absolute;
+			right: 20px;
+			max-width: 100px;
+			z-index: 999999999;
+		}
+		.caption {
+			background: url(../img/titulo-slider.png) no-repeat left; 
+			height: 90px;
+			padding: 10px 0 0 20px;
+			text-align: left;
+			width: 555px;
+		}
+		p {
+			font-size: 27px;
+			margin-bottom: -2px;
+			max-width: 550px;
+		}
+		span {
+			color: @hover-footer;
+			display: block;
+			font-size: 19px;
+			font-style: italic;
+			max-width: 550px;
+		}
+	}
+	// EN EMPRESAS
+	.container-caption-empresas {
+		background: none;
+		bottom: auto;
+		top: 50px;
+		text-align: right;
+	}
+	.flexslider-empresas {
+		img {
+			border: 1px solid #999999;
+		}
+		.caption-empresas {
+			background: rgba(29, 165, 97, 0.9);
+			border-radius: 4px;
+			color: #99ffcc;
+			display: inline-block;
+			p {
+				border-bottom: 1px solid #99ffcc;
+				font-size: 15px;
+				margin: 0;
+				padding: 5px 40px 5px 30px;
+				text-align: left;
+			}
+			p.last {
+				border-bottom: 0;;
+			}
+			p.ttl {
+				color: white;
+				font-size: 20px;
+			}
+		}
+	}
+	// EN CURSOS
+	.flexslider-cursos {
+		.flex-control-nav {
+			bottom: 30px;
+			right: 20px!important;
+			text-align: right;
+			width: 60%;    
+		}
+		.flex-control-nav  {
+			li a {
+				text-align: left;
+				text-indent: -9999px;
+			}
+		}
+	}
+	.container-caption-cursos {
+		background: rgba(0, 0, 0, 0.1);
+		bottom: 0px;
+		margin-top: 45px!important;
+		padding: 10px 0;
+		position: absolute;
+		right: 0;
+		.btn-franquicias {
+			font-size: 22px;
+			padding: 15px 40px;
+			margin: 0 0 50px 0;
+		}
+	}
+	.container-caption-cursos {
+		background: none;
+		bottom: auto;
+		top: -20px;
+		text-align: right;
+	}
+	.flexslider-cursos {
+		.caption-cursos {
+			color: white;
+			display: inline-block;
+			p, div {
+				background: rgba(28, 72, 114, 0.9);
+			}
+			p {
+				display: inline-block;
+				font-size: 15px;
+				margin: 0 0 10px 0;
+				padding: 10px;
+				text-align: left;
+			}
+			div {
+				font-style: italic;
+				text-align: left;
+				padding: 15px;
+				span {
+					display: block;
+				}
+				.ttl {
+					font-size: 20px;
+				}
+				.sub-ttl {
+					font-size: 16px;
+				}
+			}
+			.btn-franquicias {
+				font-size: 17px;
+				font-style: normal;
+				font-weight: bold;
+				float: left;
+				margin-top: 10px;
+				padding: 10px 25px;
+				&:hover {
+					background: #d2ba18;
+				}
+			}
+		}
+	}
+}
+
+// 992px
+@media (min-width: 992px) {
+	.container-caption {
+		.point {
+			max-width: 150px;
+		}
+	}
+	.container-slider  {
+		max-width: 1000px;
+		padding: 0;
+		img {
+			margin: 0 auto;
+			max-width: 940px;
+		}
+	}
+	.flex-viewport {
+		width: 1000px;
+	}
+	// EN EMPRESAS
+	.flexslider-empresas {
+		.caption-empresas {
+			p {
+				font-size: 18px;
+			}
+		}
+	}
+	.container-caption-empresas {
+		position: absolute;
+
+	}
+
+	.flexslider-empresas {
+		.flex-viewport {
+			margin: 0 auto;
+			width: 940px;
+		}
+	}
+
+	// EN CURSOS
+	.flexslider-cursos {
+		.flex-control-nav {
+			right: 40px!important;  
+		}
+	}
+	.flexslider-cursos {
+		.caption-cursos {
+			p {
+				font-size: 28px;
+			}
+			div {
+				.ttl {
+					font-size: 30px;
+					line-height: 36px;
+					max-width: 330px;
+				}
+				.sub-ttl {
+					font-size: 21px;
+				}
+			}
+		}
+	}
+
+	.container-caption-cursos {
+		position: absolute;
+
+	}
+
+	.flexslider-cursos {
+		.flex-viewport {
+			margin: 0 auto;
+			width: 940px;
+		}
+	}
+}
+
+// 1200px
+@media (min-width: 1200px) {
+
+} 
+
+// 1400px
+@media (min-width: 1200px) {
+
+} 

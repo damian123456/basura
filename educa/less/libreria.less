@@ -1,0 +1,128 @@
+/* Libreria =================================================== */
+
+.container-categoria {
+	height: 275px;
+	margin: 0 auto;
+	margin-bottom: (@margen * 3);
+	width: 306px;
+	position: relative;
+	p {
+		bottom: 15px;
+		color: white;
+		font-size: 20px;
+		font-style: italic;
+		font-weight: bold;
+		position: absolute;
+		text-align: center;
+		width: 100%;
+		z-index: 9999;
+	}
+	&:hover {
+		.libros {
+			bottom: 30px;
+		}
+	}
+}
+.contenedor {
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	z-index: 999
+}
+.libros {
+	bottom: 10px;
+	display: block;
+	left: 0;
+	position: absolute;
+	text-align: center;
+	-webkit-transition: all 300ms ease-in-out;
+	-moz-transition: all 300ms ease-in-out;
+	-ms-transition: all 300ms ease-in-out;
+	-o-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+	width: 100%;
+	z-index: 99;
+}
+
+.container-libro {
+	margin: 0 auto (@margen * 3) auto;
+	max-width: 70%;
+	text-align: center;
+	.descripcion, .datos {
+		color: @gray-dark;
+	}
+	.descripcion {
+		border-bottom: 1px solid #ccc;
+		font-size: 16px;
+		padding: @margen;
+	}
+	b {
+		display: block;
+		font-style: normal;
+	}
+	.datos {
+		font-style: italic;
+	}
+	img {
+		-webkit-transition: all 150ms ease-in-out;
+		-moz-transition: all 150ms ease-in-out;
+		-ms-transition: all 150ms ease-in-out;
+		-o-transition: all 150ms ease-in-out;
+		transition: all 150ms ease-in-out;
+	}
+}
+.hr-libreria {
+	background: url(../img/bkg-sep.png) repeat-x;
+	border: 0;
+	height: 5px;
+	display: none;
+	margin: @margen 0 (@margen * 4) 0;
+}
+// 768px
+@media only screen and (min-width: 768px) {
+	.container-categoria {
+		float: left;
+		margin: @margen;
+		max-width: 306px;
+		width: 45%;
+	}
+	.container-libro {
+		max-width: 100%;
+		.descripcion {
+			font-size: 14px;
+		}
+	}
+	.hr-libreria {
+		display: block;
+	}
+}
+
+// 992px
+@media only screen and (min-width: 992px) {
+	.container-categoria {
+		float: left;
+		width: 29%;
+	}
+	.in-libreria {
+		max-width: 1000px;
+	}
+	.container-libro {
+		.descripcion {
+			font-size: 16px;
+		}
+	}
+	.contenedor {
+		max-width: 98%;
+	}
+	.verde-margin {
+		margin-bottom: (@margen * 4);
+	}
+}
+
+// 1200px
+@media only screen and (min-width: 1200px) {
+	.contenedor {
+		max-width: 100%;
+	}
+}
+

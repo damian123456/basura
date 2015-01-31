@@ -1,0 +1,81 @@
+/* CURSOS TABLAS =================================================== */
+
+.titulo-tabla {
+	
+}
+.titulo-en-tabla {
+	font-size: 18px;
+	font-style: italic;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.box-tablas {
+	padding-bottom: (@margen * 3);
+	padding-top: (@margen * 3);
+}
+
+//EN JAPONES
+.container-tablas-japones {
+	margin-bottom: (@margen / 2);
+	.col-izq {
+		img {
+			height: auto;
+			margin-bottom: @margen;
+			width: 100%;
+		}
+	}
+	.col-der {
+		background: #279960;
+		padding: @margen (@margen * 2);
+		h3 {
+			color: white;
+			font-size: 20px;
+			font-style: italic;
+			font-weight: bold;
+			margin-bottom: 15px;
+			text-align: center;
+		}
+		p {
+			color: white;
+			font-size: 14px;
+			margin-bottom: @margen;
+		}
+	}
+}
+
+// 768px
+@media (min-width: 768px) {
+	.container-tablas-japones {
+		display: table;
+		width: 100%;
+		.col-izq, .col-der {
+			display: table-cell;
+			padding-right: 5px;
+			vertical-align: top;
+			width: 30%;
+			img {
+				margin-bottom: 0;
+				width: auto;
+			}
+		}
+		.col-der {
+			width: 70%;
+		}
+	}
+}
+
+// 992px
+@media (min-width: 992px) {
+	.container-tablas-japones {
+		.col-der {
+			h3 {
+				font-size: 24px;
+			}
+			padding: @margen (@margen * 3);
+		}
+	}
+}
+// 1200px
+@media (min-width: 1200px) {
+
+}

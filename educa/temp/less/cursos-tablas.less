@@ -1,0 +1,175 @@
+/* CURSOS TABLAS =================================================== */
+
+.titulo-tabla {
+	
+}
+.titulo-en-tabla {
+	font-size: 18px;
+	font-style: italic;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.box-tablas {
+	padding-bottom: (@margen * 3);
+	padding-top: (@margen * 3);
+}
+
+//EN JAPONES
+.container-tablas-japones {
+	margin-bottom: (@margen / 2);
+	.col-izq {
+		img {
+			height: auto;
+			margin-bottom: @margen;
+			width: 100%;
+		}
+	}
+	.col-der {
+		background: #279960;
+		padding: @margen (@margen * 2);
+		h3 {
+			color: white;
+			font-size: 20px;
+			font-style: italic;
+			font-weight: bold;
+			margin-bottom: 15px;
+			text-align: center;
+		}
+		p {
+			color: white;
+			font-size: 14px;
+			margin-bottom: @margen;
+		}
+	}
+}
+
+.tabla-curso {
+	background: #205685;
+	color: white;
+	font-size: 20px;
+	font-style: italic;
+	font-weight: bold;
+	text-align: center;
+	.col-1, .col-2, .col-3 {
+		margin: 2px;
+		a, a:hover, a:focus, a:active {
+			color: white;
+			text-decoration: none!important;
+		}
+	}
+	.col-1, .col-2 {
+		display: inline;
+		padding: 2px;
+	}
+	.col-3 {
+		background: #279960;
+	}
+	.col-top, .col-bottom, .col-unique, .col-two-lines {
+		background: #279960;
+		cursor: pointer;
+		display: block;
+		padding: 10px 5px;
+		&:hover {
+			background: #38b979;
+		}
+	}
+	.col-bottom {
+		border-top: 1px solid white;
+	}
+	.col-top:after, .col-bottom:after, .col-unique:after, .col-two-lines:after {
+		background: @amarillo;
+		border-radius: 2px;
+		content: "+ INFO";
+		color: @brand-primary;
+		font-size: 12px;
+		margin-left: 10px;
+		padding: 3px;
+		vertical-align: middle;
+	}
+	.dropdown-menu {
+		background: #38b979;
+		border: 0;
+		border-radius: 0;
+		box-shadow: none;
+		font-style: normal;
+		font-weight: normal;
+		padding: 10px;
+		text-align: left;
+		width: 100%;
+	}
+}
+
+// 768px
+@media (min-width: 768px) {
+	.container-tablas-japones {
+		display: table;
+		width: 100%;
+		.col-izq, .col-der {
+			display: table-cell;
+			padding-right: 5px;
+			vertical-align: middle;
+			width: 30%;
+			img {
+				margin-bottom: 0;
+				width: auto;
+			}
+		}
+		.col-der {
+			width: 70%;
+		}
+	}
+
+	.tabla-curso {
+		display: table;
+		max-width: 588px;
+		width: 100%;
+		.col-1, .col-2, .col-3 {
+			display: table-cell;
+			border: 2px solid @body-bg;
+			height: 100px;
+			vertical-align: middle;
+			width: 33%;
+		}
+		.col-unique {
+			padding: 35px 5px;
+		}
+		.col-two-lines {
+			padding: 23px 5px;
+			vertical-align: middle;
+			p {
+				display: inline-block;
+				line-height: 20px;
+				max-width: 70px;
+				vertical-align: middle;
+				text-align: right;
+			}
+		}
+		.dropdown-menu {
+			min-width: 330px;
+		}
+	}
+}
+
+// 992px
+@media (min-width: 992px) {
+	.container-tablas-japones {
+		.col-der {
+			h3 {
+				font-size: 24px;
+			}
+			padding: @margen (@margen * 3);
+		}
+	}
+	.tabla-curso {
+		.dropdown-menu {
+			bottom: auto;
+			left: 193px;
+			top: -2px;
+			width: 370px;
+		}
+	}
+}
+// 1200px
+@media (min-width: 1200px) {
+
+}

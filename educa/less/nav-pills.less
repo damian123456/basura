@@ -1,0 +1,58 @@
+// NAV PILLS ==========================================================
+
+.nav-pills {
+	margin-bottom: (@margen);
+	li {
+		margin: 0 10px 10px 0;
+		a {
+			background: @brand-primary;
+			color: white;
+			font-size: 13px;
+			padding: 10px 20px;
+			&:hover {
+				background: @nuevo-verde;
+			}
+		}
+	}
+	li.active {
+		a {
+			background: @nuevo-verde!important;
+		}
+	}
+}
+.nav > li > a:hover, .nav > li > a:focus {
+	background: @nuevo-verde;
+}
+
+// 768px
+@media (min-width: 768px) {
+	.nav-pills {
+		li {
+			margin: 0 2px 0 0;
+			a {
+				font-size: 14px;
+				padding: 5px 20px;
+			}
+		}
+	}
+}
+// 992px
+@media (min-width: 992px) {
+	.nav-pills {
+		li {
+			a {
+				font-size: 18px;
+			}
+		}
+	}
+}
+
+// 1200px
+@media (min-width: 1200px) {
+
+}
+
+// 1360px
+@media (min-width: 1400px) {
+
+}

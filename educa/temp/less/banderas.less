@@ -1,0 +1,53 @@
+// Banderas
+.banderas {
+    text-align: center;
+    margin-bottom: 40px;
+	padding: (@margen * 2) 0;
+	.clearfix();
+	img {
+    	margin: 1px;
+        height: auto;
+        max-width: 50px;
+	}
+}
+.in-home {
+    .banderas {
+        margin-bottom: 0;
+    }
+}
+// 768px
+@media (min-width: 768px) {
+    .banderas {
+        margin: 40px 0!important;
+        img {
+            float: left;
+            max-width: 78px;
+            -webkit-transition: margin 0.3s ease-out;
+            -moz-transition: margin 0.3s ease-out;
+            -o-transition: margin 0.3s ease-out;
+            transition: margin 0.3s ease-out;
+            &:hover {
+                margin-top: -10px;
+            }
+        }
+    }
+}
+
+// 992px
+@media (min-width: 992px) {
+    .banderas {
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+// 1200px
+@media (min-width: 1200px) {
+
+} 
+
+// 1400px
+@media (min-width: 1200px) {
+
+} 
