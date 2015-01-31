@@ -61,7 +61,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <ul class="nav nav-pills">
 <?
-                    $categorias = $db->fetch_all("SELECT * FROM categorias_libros");
+                    $categorias = $db->fetch_all("SELECT * FROM categorias_libros ORDER BY id");
                     $i = 0;                        
                     $clase = '';
                     foreach($categorias as $c){
@@ -139,22 +139,31 @@
             $categoria_id = $categoria_actual['id'];
 
             $libros = $db->fetch_all('SELECT * FROM libreria WHERE activo = 1 ORDER BY id DESC');
+
+            $i = 0; 
             
             foreach($libros as $l){
-                   if ($l['categoria'] == $categoria_id){
-                       
+                if ($l['categoria'] == $categoria_id){
+                   
 ?>                      
-                       <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 libro">
-                            <div class="container-libro">
-                                <img src="uploads/<? echo $l['imagen']?>" alt="">
-                                <p class="descripcion"><? echo $l['titulo']?></p>
-                                <p class="datos"><b><? echo $l['autor']?></b>
-                                    <? echo $l['editorial']?></p>
-                            </div>
+                   <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 libro">
+                        <div class="container-libro">
+                            <img src="uploads/<? echo $l['imagen']?>" alt="">
+                            <p class="descripcion"><? echo $l['titulo']?></p>
+                            <p class="datos"><b><? echo $l['autor']?></b>
+                                <? echo $l['editorial']?></p>
                         </div>
+                    </div>
 <?
-                   }
+                    if ($i == 3){
+?>
+                        <div style="clear:both"></div>
+<?
+                    }
+                    $i++;
+                    $i = $i % 4;
                 }
+            }
 
 ?>                
                 

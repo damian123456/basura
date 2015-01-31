@@ -6,7 +6,7 @@
 
 	$upload_dir = '../uploads/';
 	$targ_w = 940;
-	$targ_h = 408;
+	$targ_h = 380;
 	$img_quality = 96;
 
 	switch($_SESSION['msg_code']){

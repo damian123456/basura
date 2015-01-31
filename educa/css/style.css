@@ -5498,7 +5498,7 @@ td p a {
 /* Libreria =================================================== */
 
 .libro{
-  min-height: 420px;
+  /*min-height: 420px;*/
 
 }
 .container-categoria {
