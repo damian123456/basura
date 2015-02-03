@@ -3,7 +3,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="flexslider-cursos">
                         <ul class="slides">
-                        <?$cursosSlideshow = $db->fetch_all('SELECT * FROM cursos_slideshow ORDER BY id DESC');
+                        <?$cursosSlideshow = $db->fetch_all('SELECT * FROM cursos_slideshow ORDER BY position, id DESC');
                         foreach ($cursosSlideshow as $cs) {
                             if ($cs['active'] == 1) {?>
                             <li>

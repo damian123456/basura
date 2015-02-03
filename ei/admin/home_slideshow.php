@@ -38,7 +38,7 @@
 		$red_btn_url = $db->escape_string($_POST['red_btn_url']);
 		$active = ($_POST['active']?1:0);
 		$crop_data = json_decode($_POST['coords'],true);
-		$position = 999;
+		$position = 0; //POSICION INICIAL / ORDEN INICIAL
 		$archivo = $_FILES["archivo"];
 
 		if(!$title || !$subtitle || !$green_btn_url)

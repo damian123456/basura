@@ -16,7 +16,7 @@
 		</thead>
 		<tbody>
 <?	foreach($items as $k => $item){   ?>
-			<tr id="noticia_<?=$item['id']?>">
+			<tr id="cursoss_<?=$item['id']?>">
 				<td class="hidden-xs" width="20%">
 					<img src="<?=$upload_dir.$item['image']?>" class="img-responsive"/>
 				</td>

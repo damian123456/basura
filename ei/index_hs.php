@@ -54,7 +54,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">                    
                     <div class="flexslider">
                         <ul class="slides">
-                        <?$homeSlideshow = $db->fetch_all('SELECT * FROM home_slideshow ORDER BY id DESC');
+                        <?$homeSlideshow = $db->fetch_all('SELECT * FROM home_slideshow ORDER BY position, id DESC');
                         foreach ($homeSlideshow as $hs) {
                             if ($hs['active'] == 1) {?>
 						<li>

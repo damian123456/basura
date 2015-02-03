@@ -56,7 +56,7 @@ $config["scope"] = array(
 
 	/* FIN TABLA CURSOS */
 
-	"home_slideshow" => array(
+	"slide" => array(
 		"actions" => array("activate", "deactivate", "remove", "confirm-remove"),
 		"current" => 2,
 		"nombre" => "Slides",
