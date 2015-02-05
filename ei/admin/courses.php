@@ -213,6 +213,7 @@
 		<script src="js/jquery.sieve.min.js"></script>
 		<script src="js/bootstrap-colorselector.js"></script>
   		<script src="js/prettify.js"></script>
+        <script src="ckeditor/ckeditor.js"></script>
 
 
 		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">

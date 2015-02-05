@@ -1,6 +1,8 @@
 <?
 	include('inc/init.php');
 
+
+
 	$action = $_REQUEST['action'];
 	$id = intval($_REQUEST['id']);
 
@@ -27,6 +29,7 @@
 		$item = $db->fetch_item("SELECT * FROM home_slideshow WHERE id=$id");
 	}
 
+
 	if($_POST['save']){
 
 		$title = $db->escape_string($_POST['title']);
@@ -38,7 +41,21 @@
 		$red_btn_url = $db->escape_string($_POST['red_btn_url']);
 		$active = ($_POST['active']?1:0);
 		$crop_data = json_decode($_POST['coords'],true);
-		$position = 0; //POSICION INICIAL / ORDEN INICIAL
+
+		/*$pos = $db->fetch_all("SELECT * FROM home_slideshow ORDER BY position");
+
+		foreach($pos as $p){
+
+		}*/
+
+
+
+		$position = -9; //POSICION INICIAL / ORDEN INICIAL
+
+	
+
+		
+
 		$archivo = $_FILES["archivo"];
 
 		if(!$title || !$subtitle || !$green_btn_url)
@@ -205,7 +222,7 @@
 	            helper: fixHelper,
 	            update: function(event, ui) {
 	                var orden = $(this).sortable('toArray').toString();
-	                $.get('order.php', {orden:orden, order_general:'1'});
+	                $.get('order.php', {orden:orden, order_general:'2'});
 	            }
 	        }).disableSelection();
 

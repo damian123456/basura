@@ -50,9 +50,9 @@
 				</div>
 			</div>
 
-<?/* ACA ME METI YO 
 
-<?	if($categorias){   ?>
+
+<?/* ACA ME METI YO 	if($categorias){   ?>
 	<div class="form-group">
 		<label class="col-sm-2 control-label">Es subcategor&iacute;a de:</label>
 		<div class="col-sm-10">
@@ -65,9 +65,9 @@
 			</select>
 		</div>
 	</div>
-	<?	} ?>
+	<?	}ACA TERMINE YO */ ?>
 
-ACA TERMINE YO */?>
+
 
 			<div class="form-group">
 				<label class="col-sm-2 control-label" for="category">Categor&iacute;a</label>
@@ -85,51 +85,14 @@ ACA TERMINE YO */?>
 			<div class="form-group">
 				<label class="col-sm-2 control-label" for="content">Contenido</label>
 				<div class="col-sm-10 course-body">
-					<textarea class="editor" name="content"><?=htmlentities(getValue($item,'content'),ENT_COMPAT | ENT_HTML401,$charset)?></textarea>
+					<textarea class="ckeditor" id="editor1" name="content"><?=htmlentities(getValue($item,'content'),ENT_COMPAT | ENT_HTML401,$charset)?></textarea>
 				</div>
+                <script>
+                    // Replace the <textarea id="editor1"> with a CKEditor
+                    // instance, using default configuration.
+                    CKEDITOR.replace( 'editor1' );
+            </script>
 			</div>
-			
-			<div class="tablas">
-
-				<div class="form-group">
-					<label class="col-sm-2 control-label" for="excerpt">Color</label>
-					<div class="col-sm-8">
-						<input type="text" class="form-control tabla" id="hexa" name="hexa" value="<?=getValue($item,'color')?>">
-					</div>
-					<button class="btn dropdown-toggle" data-toggle="dropdown">
-						<select id="colorselector_1">
-							<option value="3b9b42" data-color="#3b9b42" selected="selected">verde</option>
-							<option value="1ab88d" data-color="#1ab88d">petroleo</option>
-							<option value="e9880c" data-color="#e9880c">naranja</option>
-							<option value="cf0063" data-color="#cf0063">magenta</option>
-							<option value="15456d" data-color="#15456d">azul</option>
-						</select>
-			  		</button>
-				</div>
-
-				<div class="form-group">
-					<label class="col-sm-2 control-label" for="content">Contenido</label>
-					<div class="col-sm-10 course-body">
-						<textarea class="tabla editor" name="content"><?=htmlentities(getValue($item,'content'),ENT_COMPAT | ENT_HTML401,$charset)?></textarea>
-					</div>
-				</div>
-			</div>
-			
-
-			<div class="form-group">
-				<label class="col-sm-2 control-label" for="content">Pie de Contenido</label>
-				<div class="col-sm-10 course-body">
-					<textarea class="editor" name="content"><?=htmlentities(getValue($item,'content'),ENT_COMPAT | ENT_HTML401,$charset)?></textarea>
-				</div>
-			</div>
-
-			<div class="form-group">
-				<label class="col-sm-2 control-label" for="show_courses_explanations">Mostrar explicaci&oacute;n de cursos</label>
-				<div class="col-sm-10">
-					<input type="checkbox" name="show_courses_explanations" id="show_courses_explanations" <?=$item['show_courses_explanations']?'checked':''?> style="width:34px;height:34px;">
-				</div>
-			</div>
-
 		</div>
 
 <?// VARIATIONS PANEL ?>
@@ -267,6 +230,8 @@ ACA TERMINE YO */?>
 	});
 </script>
 <script type="text/javascript">
+
+
 $(function(){
 	$('.editor').summernote({
 		height:200,

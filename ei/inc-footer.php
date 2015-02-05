@@ -37,13 +37,13 @@
                             <ul>
                                 <li><a href="http://www.educaidiomaportugues.blogspot.com" target="_blank">Portugués</a></li>
                                 <li><a href="http://www.educaidiomaingles.blogspot.com" target="_blank">Inglés</a></li>
-                                <li><a href="http://www.educaidiomaitaliano.blogspot.com" target="_blank"">Italiano</a></li>
+                                <li><a href="http://www.educaidiomaitaliano.blogspot.com" target="_blank">Italiano</a></li>
                                 <li><a href="http://www.educaidiomafrances.blogspot.com" target="_blank">Francés</a></li>
                                 <li><a href="http://www.educaidiomasaleman.blogspot.com" target="_blank">Alemán</a></li>
                                 <li><a href="http://www.educaidiomachino.blogspot.com.ar" target="_blank">Chino</a></li>
                                 <li><a href="http://www.educaidiomajapones.blogspot.com" target="_blank">Japonés</a></li>
                                 <li><a href="http://www.educaidiomaruso.blogspot.com" target="_blank">Ruso</a></li>
-                                <li><a href="http://">Español</a></li>
+                                <li><a href="http://www.educaidiomacastellano.blogspot.com.ar" target="_blank">Español</a></li>
                             </ul>
                         </div>
                     </div>
@@ -114,8 +114,46 @@
         })();
         </script>
         <!--End of Tawk.to Script-->
+		
 
-        <!-- Add mousewheel plugin (this is optional) -->
+        <script language=JavaScript>
+<!--
+
+//Disable right mouse click Script
+//By Maximus (maximus@nsimail.com) w/ mods by DynamicDrive
+//For full source code, visit http://www.dynamicdrive.com
+
+var message="Copyright 2015 EDUCA IDIOMAS";
+
+///////////////////////////////////
+function clickIE4(){
+if (event.button==2){
+alert(message);
+return false;
+}
+}
+
+function clickNS4(e){
+if (document.layers||document.getElementById&&!document.all){
+if (e.which==2||e.which==3){
+alert(message);
+return false;
+}
+}
+}
+
+if (document.layers){
+document.captureEvents(Event.MOUSEDOWN);
+document.onmousedown=clickNS4;
+}
+else if (document.all&&!document.getElementById){
+document.onmousedown=clickIE4;
+}
+
+document.oncontextmenu=new Function("alert(message);return false")
+
+// --> 
+</script><!-- Add mousewheel plugin (this is optional) -->
         <script type="text/javascript" src="fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
 
         <!-- Add fancyBox main JS and CSS files -->
@@ -161,3 +199,9 @@
               });
             });
         </script>
+        <script>
+        $(window).load(function(){
+            $('#inicio-modal').modal('show');
+        });
+        </script>
+        

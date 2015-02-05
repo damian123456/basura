@@ -308,5 +308,20 @@
             </div>
         </div>
         <?php include("inc-footer.php"); ?>
+        <!-- Modal -->
+        <div class="modal fade" id="inicio-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                <p>Te invitamos a conocer Novedades y Actividades de EDUCA IDIOMAS en Nuestra Página de Facebook.</p>
+				<img src="img/facebook-educa.jpg" >
+				 <a class="addthis_button_facebook_like" fb:like:layout="button_count" fb:like:width="110" fb:like:href="https://www.facebook.com/insteducaidiomas?fref=ts"></a>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
     </body>
 </html>

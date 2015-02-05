@@ -23,13 +23,13 @@
 					$db->update("UPDATE secciones SET orden = {$orden} WHERE id = {$id_item}");
 				break;
 				case 'slide':
-					$db->update("UPDATE home_slideshow SET position = {$orden} WHERE id = {$id_item}");//its ok
+					$db->update("UPDATE home_slideshow SET position = {$orden} WHERE id = {$id_item}");//home_slideshow
 				break;
 				case 'testimonio':
 					$db->update("UPDATE testimonios SET orden = {$orden} WHERE id = {$id_item}");
 				break;
 				case 'categoria':
-					$db->update("UPDATE categorias SET orden = {$orden} WHERE id = {$id_item}");//its ok
+					$db->update("UPDATE categorias SET orden = {$orden} WHERE id = {$id_item}");//categorias
 				break;
 				case 'curso':
 					$db->update("UPDATE courses SET position = {$orden} WHERE id = {$id_item}");
@@ -57,7 +57,7 @@
 				break;
 
 				case 'cursoss':
-					$db->update("UPDATE cursos_slideshow SET position = {$orden} WHERE id = {$id_item}");//its not ok
+					$db->update("UPDATE cursos_slideshow SET position = {$orden} WHERE id = {$id_item}");//cursos_slideshow
 				break;
 
 				/* FIN NOSOTROS */

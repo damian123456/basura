@@ -35,24 +35,47 @@
           <script src="js/respond.min.js"></script>
           <script src="js/html5.js"></script>
         <![endif]-->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script type="text/javascript" src="fancybox/jquery.fancybox.js?v=2.1.5"></script>
-<link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox.css?v=2.1.5" media="screen" />
-   <script>
-$(document).ready(function () {
-    $(".fancybox").fancybox();
-    $(".fancybox").trigger('click');
-});
-</script> </head>
-    <body>
-	<div id="popup" style="display: none; width: 560px;">
-<h2>Fancybox Content</h2>
-Lorem Ipsum...
- 
-</div>
+
         <div id="preloader"></div>
         <?php include("inc-header.php"); ?>
+<script language=JavaScript>
+<!--
 
+//Disable right mouse click Script
+//By Maximus (maximus@nsimail.com) w/ mods by DynamicDrive
+//For full source code, visit http://www.dynamicdrive.com
+
+var message="Copyright 2015 Educa Idiomas";
+
+///////////////////////////////////
+function clickIE4(){
+if (event.button==2){
+alert(message);
+return false;
+}
+}
+
+function clickNS4(e){
+if (document.layers||document.getElementById&&!document.all){
+if (e.which==2||e.which==3){
+alert(message);
+return false;
+}
+}
+}
+
+if (document.layers){
+document.captureEvents(Event.MOUSEDOWN);
+document.onmousedown=clickNS4;
+}
+else if (document.all&&!document.getElementById){
+document.onmousedown=clickIE4;
+}
+
+document.oncontextmenu=new Function("alert(message);return false")
+
+// --> 
+</script>
         <div class="content-page">
              <img src="img/firulete-argentina.png" alt="" class="firulete-argentina">
             <img src="img/firulete-francia.png" alt="" class="firulete-francia">

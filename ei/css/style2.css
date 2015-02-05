@@ -104,3 +104,9 @@ text-align: center;
     height: 5em;
   }
 }
+.flexslider, .logo, #tawkchat-iframe-container, .container-educa-idiomas {
+  z-index: 999!important;
+}
+.modal {
+  z-index: 99999;
+}
