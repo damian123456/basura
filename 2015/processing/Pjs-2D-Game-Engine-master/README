@@ -1,0 +1,11 @@
+A Processing library for use in 2D game making,
+fully compatible with online deployedment via
+the Processing.js library.
+
+Documentation pending
+
+tests are in the ./tests/ directory
+
+This is a work in progress, but the code is public domain.
+
+- Mike "Pomax" Kamermans

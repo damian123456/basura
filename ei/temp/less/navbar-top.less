@@ -1,0 +1,95 @@
+// NAV BAR TOP ==========================================================
+
+
+.navbar-default {
+	border: 0;
+	font-family: @font-family-monospace;
+	font-weight: 300;
+	.nav > li.inline-socials {
+		display: inline-block;
+		margin: 5px 10px 5px -5px;
+		vertical-align: middle;
+	}
+}
+.navbar-top {
+	border-bottom: 1px solid #6c879b;
+	border-radius: 0;
+	text-align: right;
+}
+.navbar-top .navbar-toggle {
+	border: 0;
+}
+.navbar-top .navbar-toggle .icon-bar {
+	background: white;
+}
+.navbar-top .navbar-nav > li > a {
+	font-size: 14px;
+	padding: 5px 10px;
+}
+.facebook, .twitter, .youtube, .google {
+	background: url(../img/sprite.png) no-repeat;
+	background-position: 0 0;
+	height: 32px;
+	width: 32px;
+	-webkit-transition: none!important;
+	-moz-transition: none!important;
+	-ms-transition: none!important;
+	-o-transition: none!important;
+	transition: none!important;
+}
+
+.facebook {
+	background-position: 0px 0;
+	&:hover {
+		background-position: 0 -32px;
+	} 
+}
+.twitter {
+	background-position: -32px 0;
+	&:hover {
+		background-position: -32px -32px;
+	} 
+}
+.youtube {
+	background-position: -64px 0;
+	&:hover {
+		background-position: -64px -32px;
+	} 
+}
+.google {
+	background-position: -96px 0;
+	&:hover {
+		background-position: -96px -32px;
+	} 
+}
+// 768px
+@media (min-width: 768px) {
+	.navbar-top {
+		font-size: 16px;
+		padding: 10px 0 5px 0;
+		.nav > li.inline-socials {
+			margin: 5px 0px 5px 10px;
+		}
+	}
+	.navbar-top .navbar-nav > li > a {
+		padding: 10px;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+// 992px
+@media (min-width: 992px) {
+
+}
+
+// 1200px
+@media (min-width: 1200px) {
+
+}
+
+// 1360px
+@media (min-width: 1400px) {
+
+}

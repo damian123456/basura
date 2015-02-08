@@ -1,0 +1,168 @@
+/* CURSOS BOXES =================================================== */
+
+.boxes-cursos, .boxes-slider {
+	color: white;
+	position: relative;
+	.arrows-top, .arrows-bottom {
+		height: 8px;
+		left: 0;
+		position: absolute;
+		width: 100%;
+	}
+	.arrows-top {
+		background: url(../img/top-boxes-cursos.png) repeat-x left;
+		top: 0;
+	}
+	.arrows-bottom {
+		background: url(../img/bottom-boxes-cursos.png) repeat-x left;
+		bottom: 0;
+	}
+}
+.container-box {
+	.col-1, .col-3 {
+		display: none;
+	}
+	.col-2 {
+			background: @rojo-oscuro;
+			font-size: 18px;
+			padding: (@margen * 2) @margen;
+			&.in-ruso {
+				background: #2249be;
+			}
+			&.in-aleman {
+				background: #b81918;
+			}
+			&.in-espanol {
+				background: #74adcd;
+			}
+			&.in-frances {
+				background: #c31629;
+			}
+			&.in-italiano {
+				background: #078440;
+			}
+			&.in-portugues {
+				background: #329926;
+			}
+	}
+	ul {
+    	list-style-image: url('../img/tilde.png');
+    	padding-left: 25px;
+    	li {
+    		margin-bottom: @margen;
+    	}
+	}
+	.titulo {
+		font-size: 22px;
+		font-style: italic;
+		span {
+			font-family: @font-family-serif;
+			font-style: normal;
+		}
+	}
+	.subtitulo {
+		font-style: italic;
+		font-weight: bold;
+		margin-bottom: @margen;
+	}
+}
+
+// 768px
+@media (min-width: 768px) {
+
+}
+
+// 992px
+@media (min-width: 992px) {
+	.container-box {
+		display: table;
+		width: 100%;
+		.col-1, .col-2, .col-3 {
+			background: white;
+			display: table-cell;
+			vertical-align: top;
+			width: 20%;
+		}
+		.col-1, .col-3 {
+			img {
+				height: auto;
+				width: 100%;
+			}
+		}
+		.col-2 {
+			background: @rojo-oscuro;
+			font-size: 13px;
+			width: 60%;
+		}
+		.titulo, .subtitulo {
+			font-size: 18px;
+		}
+		&.container-in-ruso {
+			.col-2 {
+				li {
+					margin-bottom: (@margen * 2);
+				}
+			}
+		}
+		&.container-in-aleman {
+			.col-2 {
+				li {
+					margin-bottom: (@margen * 1.6);
+				}
+			}
+		}
+		&.container-in-frances {
+			.col-2 {
+				li {
+					margin-bottom: (@margen * 1.5);
+				}
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+// 1050px
+@media (min-width: 1050px) {
+	.container-box {
+		.col-2 {
+			font-size: 15px;
+		}
+	}
+}
+// 1300px
+@media (min-width: 1300px) {
+	.container-box {
+		.col-2 {
+			font-size: 16px;
+			padding: (@margen * 3);
+		}
+		.titulo, .subtitulo {
+			font-size: 26px;
+		}
+	}
+}
+
+// 1500px
+@media (min-width: 1500px) {
+	.container-box {
+		.col-2 {
+			font-size: 18px;
+		}
+		.titulo, .subtitulo {
+			font-size: 30px;
+		}
+	}
+}
+// 1700px
+@media (min-width: 1700px) {
+	.container-box {
+		.col-2 {
+			font-size: 21px;
+		}
+		.titulo, .subtitulo {
+			font-size: 36px;
+		}
+	}
+}

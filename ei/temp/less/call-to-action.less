@@ -1,0 +1,126 @@
+// Call to action
+
+.call-to-action {
+	border: 1px solid @hover-footer;
+	overflow: hidden;
+	position: relative;
+	max-width: 224px;
+	margin: 0 auto 30px auto;	
+	img {
+		height: auto;
+		width: 100%;
+	}
+	.content-call {
+		background-color: rgba(51, 165, 103, 0.8);
+		bottom: -30px;
+		height: 100px;
+		left: 0;
+		padding-top: 30px;
+		position: absolute;
+		text-align: center;
+		width: 100%;
+		-webkit-transition: all 200ms ease-in-out;
+		-moz-transition: all 200ms ease-in-out;
+		-ms-transition: all 200ms ease-in-out;
+		-o-transition: all 200ms ease-in-out;
+		transition: all 200ms ease-in-out;
+		p {
+			font-weight: bold;
+			position: relative;
+			
+		}
+		.more {
+			background: white;
+			border: 1px solid @verde-oscuro;
+			-webkit-border-radius: 50px 50px 50px 50px;
+			border-radius: 50px 50px 50px 50px;
+			color: @verde-oscuro;
+			font-weight: 300;
+			font-size: 30px;
+			line-height: 38px;
+			height: 48px;
+			width: 48px;
+			position: absolute;
+			top: -20px;
+			left: 35%;
+		}
+		p, span  {
+			color: white;
+			font-size: 20px;
+			margin-bottom: 0;
+		}
+	}
+	span {
+		opacity: 0;
+		-webkit-transition: all 300ms ease-in-out;
+		-moz-transition: all 300ms ease-in-out;
+		-ms-transition: all 300ms ease-in-out;
+		-o-transition: all 300ms ease-in-out;
+		transition: all 300ms ease-in-out;
+	}
+	&:hover {
+		.content-call {
+			bottom: 0px;
+		}
+		span {
+			opacity: 1;
+		}
+	}
+}
+// 768px
+@media (min-width: 768px) {
+	.call-to-action {
+		.content-call {
+			bottom: -25px;
+			height: 80px;
+			padding-top: 20px;
+			.more {
+				font-size: 20px;
+				line-height: 28px;
+				height: 34px;
+				width: 34px;
+				left: 38%;
+			}
+			p  {
+				font-size: 17px;
+			}
+			span  {
+				font-size: 15px;
+			}
+		}
+	}
+}
+
+// 992px
+@media (min-width: 992px) {
+	.call-to-action {
+		margin-bottom: 0;
+		.content-call {
+			bottom: -30px;
+			height: 100px;
+			padding-top: 30px;
+			.more {
+				font-size: 30px;
+				line-height: 38px;
+				height: 48px;
+				width: 48px;
+				left: 35%;
+			}
+			p, span  {
+				font-size: 20px;
+			}
+		}
+		
+	}
+
+}
+
+// 1200px
+@media (min-width: 1200px) {
+
+} 
+
+// 1400px
+@media (min-width: 1200px) {
+
+} 

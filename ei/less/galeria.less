@@ -1,0 +1,117 @@
+/* Galeria =================================================== */
+
+.container-galeria {
+	background: #a4ba38;
+	-webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.5);
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,.5);
+	font-size: 16px;
+	font-weight: bold;
+	margin: 0 auto (@margen * 2) auto;
+	max-width: 350px;
+	padding: @margen;
+	text-align: center;
+	-webkit-transition: all 100ms ease-in-out;
+	-moz-transition: all 100ms ease-in-out;
+	-ms-transition: all 100ms ease-in-out;
+	-o-transition: all 100ms ease-in-out;
+	transition: all 100ms ease-in-out;
+	img {
+		border: 1px solid white;
+		height: auto;
+		margin-bottom: @margen;
+		width: 100%;
+	}
+	&:hover {
+		background: @nuevo-verde;
+		color: inherit;
+	}
+	p {
+		margin-bottom: 0;
+	}
+	&.in-videos {
+		&:hover {
+			background: #a4ba38;
+		}
+	}
+	&.in-detalle {
+		background: #7bba38;
+		padding: (@margen * 1.3);
+		&:hover {
+			background: #6a9f31;
+		}
+		img {
+			margin-bottom: 0;
+		}
+	}
+}
+.titulo-galeria {
+	color: @brand-primary;
+	font-size: 20px;
+	font-weight: bold;
+}
+.paginador {
+	text-align: center;
+}
+.pagination {
+	margin-bottom: 50px;
+}
+.pagination li a {
+	background: transparent;
+	border: 0;
+	font-size: 16px;
+	padding: 6px;
+}
+.pagination li:first-child a, .pagination li:last-child a {
+	background: @brand-primary;
+	border-radius: 4px;
+	color: white;
+	font-size: 14px;
+	padding: 6px 16px;
+}
+.pagination li:first-child a {
+	margin-right: 5px;
+}
+.pagination li:last-child a {
+	margin-left: 5px;
+}
+.pagination li.active a, .pagination li.active a:hover {
+	background: transparent;
+	color: @verde;
+}
+.container-galeria {
+	iframe {
+		height: 312px;
+		margin-bottom: 11px;
+		width: 100%;
+	}
+}
+// 768px
+@media only screen and (min-width: 768px) {
+	.titulo-galeria {
+		padding-left: 13px;
+		padding-top: 2px;
+	}
+	.paginador {
+		text-align: right;
+	}
+	.container-galeria {
+		iframe {
+			height: 185px;
+		}
+	}
+}
+
+// 992px
+@media only screen and (min-width: 992px) {
+	.container-galeria {
+		iframe {
+			height: 255px;
+		}
+	}
+}
+
+// 1200px
+@media only screen and (min-width: 1200px) {
+
+}
+

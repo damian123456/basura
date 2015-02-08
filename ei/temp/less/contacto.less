@@ -1,0 +1,134 @@
+/* CONTACTO =================================================== */
+
+.mensaje-enviado {
+	color: @verde;
+	font-size: 16px;
+	font-weight: bold;
+	margin: -30px 0 (@margen * 2) 0;
+}
+.container-foto-mapa {
+	background: @brand-primary;
+	margin-bottom: (@margen * 3);
+	padding: 20px;
+	img {
+		border: 1px solid white;
+		height: auto;
+		width: 100%;
+	}
+	p {
+		color: #f1efe3;
+		font-size: 18px;
+		margin-top: 20px;
+	}
+	iframe {
+		width: 100%;
+	}
+}
+
+// 768px
+@media (min-width: 768px) {
+	.container-foto-mapa {
+		min-height: 267px;
+		p {
+			font-size: 16px;
+		}
+		iframe {
+			height: 175px;
+		}
+	}
+}
+
+// 992px
+@media (min-width: 992px) {
+	.container-foto-mapa {
+		min-height: 375px;
+		p {
+			font-size: 18px;
+		}
+		iframe {
+			height: 284px;
+		}
+	}
+}
+
+// 1200px
+@media (min-width: 1200px) {
+	.in-contacto {
+		.firulete-brasil, .firulete-inglaterra {
+			display: none!important;
+		} 
+		.firulete-argentina {
+			max-width: 200px;
+			right: 300px;
+			top: 250px;
+		}
+	}
+}
+// 1400px
+@media (min-width: 1400px) {
+	.in-contacto {
+		.firulete-brasil, .firulete-inglaterra {
+			display: block!important;
+		} 
+		.firulete-brasil  {
+			max-width: 200px;
+			top: 60px;
+		}
+		.firulete-inglaterra {
+			left: 60px;
+			max-width: 150px;
+		}
+		.firulete-argentina {
+			max-width: 200px;
+			right: 300px;
+			top: 250px;
+		}
+	}
+}
+// 1500px
+@media (min-width: 1500px) {
+	.in-contacto {
+		.firulete-brasil  {
+			max-width: 240px;
+			top: 60px;
+		}
+		.firulete-inglaterra {
+			left: 60px;
+			max-width: 200px;
+			top: 300px;
+		}
+		.firulete-argentina {
+			max-width: 100%;
+			top: 220px;
+		}
+	}
+}
+// 1600px
+@media (min-width: 1600px) {
+	.in-contacto {
+		.firulete-brasil  {
+			max-width: 280px;
+			top: 60px;
+		}
+		.firulete-inglaterra {
+			left: 45px;
+			max-width: 100%;
+			top: 350px;
+		}
+	}
+}
+// 1700px
+@media (min-width: 1700px) {
+	.in-contacto {
+		.firulete-brasil  {
+			max-width: 100%;
+		}
+		.firulete-inglaterra {
+			left: 60px;
+			top: 450px;
+		}
+		.firulete-argentina {
+			right: 400px;
+		}
+	}
+}
