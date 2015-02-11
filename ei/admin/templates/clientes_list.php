@@ -23,7 +23,7 @@
 <?		foreach($clientes as $k => $cliente){ ?>
 		  <li id="cliente_<?=$cliente['id']?>" class="col-sm-3">
 			<div class="thumbnail">
-				<img src="<?=foto_url($cliente['archivo'], $targ_w, $targ_h)?>" class="img-responsive" alt="...">
+				<img src="<?=$upload_dir.$cliente['archivo']?>" class="img-responsive" alt="...">
 			  <div class="caption">
 				<hr />
 				<p class="text-center"><?=$cliente['nombre']?></p>

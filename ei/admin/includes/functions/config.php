@@ -166,7 +166,7 @@ $config["scope"] = array(
 	"clientes" => array(
 		"actions" => array("activate", "deactivate", "remove", "confirm-remove"),
 		"current" => 5,
-		"nombre" => "Clientes",
+		"nombre" => "Convenios",
 		"link" => "clientes.php",
 		"submenu" => array(
 			array(

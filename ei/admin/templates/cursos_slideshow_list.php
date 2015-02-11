@@ -18,7 +18,7 @@
 <?	foreach($items as $k => $item){   ?>
 			<tr id="cursoss_<?=$item['id']?>">
 				<td class="hidden-xs" width="20%">
-					<img src="<?=$upload_dir.$item['image']?>" class="img-responsive"/>
+					<img src="<?=$upload_dir.$item['image']?>" class="img-responsive" width="75%"/>
 				</td>
 				<td width="25%"><?=$item['title']?></td>
 				<td class="hidden-xs" width="20%"><?=$item['added']?></td>

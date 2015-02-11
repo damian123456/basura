@@ -5,7 +5,7 @@ include("includes/init.php");
             
 <?      foreach($children as $c){ ?>
                 
-                    <li><a href="#"><?=$c['nombre']?></a></li>
+                    <li><a href="2content.php?content=<?=$c['id']?>&category=<?=$c['parent']?>"><?=$c['nombre']?></a></li>
                     
 <?          } ?>
 <?      } ?>

@@ -1,0 +1,90 @@
+		body {
+			font: 75%/170% Arial, Helvetica, sans-serif;
+			color: #e7e7e7;
+			font-weight:bold;
+			background: url('http://i.imgur.com/4EydDBo.jpg') no-repeat center center fixed;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			margin: 0px;
+			padding: 0px;
+		}
+		a { color: #55aaff; }
+		#usern{
+			background:url('http://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/32/Places-user-identity-icon.png') no-repeat;
+			background-color:#777777;
+		}
+		#passw{
+			background:url('http://icons.iconarchive.com/icons/custom-icon-design/pretty-office-5/32/locked-icon.png') no-repeat;
+			background-color:#777777;
+		}
+		.frmtb:focus{
+			width:270px;
+			-webkit-box-shadow: 0px 0px 10px rgba(44, 102, 255, 1);
+			-moz-box-shadow:    0px 0px 10px rgba(44, 102, 255, 1);
+			box-shadow:         0px 0px 10px rgba(44, 102, 255, 1);
+		}
+		.frmtb{
+			cursor:pointer;
+			transition: box-shadow 0.3s ease-in-out, width 0.5s ease-in-out;
+			-webkit-transition: box-shadow 0.3s ease-in-out, width 0.5s ease-in-out;
+			-moz-transition: box-shadow 0.3s ease-in-out, width 0.5s ease-in-out;
+			padding-left:35px;
+			padding-top:5px;
+			padding-right:5px;
+			padding-bottom:5px;
+			margin-bottom:10px;
+			outline: none;
+			height:35px;
+			width:250px;
+			border-radius: 8px;
+			font-family:Arial, sans-serif;
+			font-size:10pt;
+			border: none;
+			color: #cbcccd;
+		}
+		.frmbtn:hover{
+			background: #DDEBFF;
+		}
+		.frmbtn{
+			border-radius: 10px;
+			font-family:Arial, sans-serif;
+			font-size:10pt;
+			background-image:url('http://upload.wikimedia.org/wikipedia/commons/a/a0/WikiMediaPlayerGradient3.jpg');
+			border:#2D4063 1px solid;
+			color:#2D4063;
+			font-weight:bold;
+			padding:5px;
+			vertical-align:top;
+		}
+		#kwshadow{
+			opacity:0.9;
+			background:#FFF;
+			margin-top:70px; 
+			border-radius: 20px;
+			color: #172431;
+			border: 5px solid #000;
+			font-family: Monaco;
+			display: block;
+			width: 350px;
+			height:250px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+		#kwshadow2 a:hover{
+			border-radius: 2px;
+			box-shadow: 0px 0px 3px 3px #000;
+		}
+		#kwshadow2 a{
+			text-decoration:none;
+			padding: 4px;
+		}
+		#kwshadow2 {
+			bottom:0;
+			position:fixed;
+			background: #000000;
+			margin-top: 70px; 
+			padding: 5px;
+			width: 100%;      
+		}

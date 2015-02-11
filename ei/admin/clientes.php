@@ -3,7 +3,7 @@
 require_once("../includes/config.php");//agregue
 	$action = $_GET['action'];
 	$upload_dir = '../uploads/';
-	$targ_w = 195;
+	$targ_w = 220;
 	$targ_h = 98;
 	$img_quality = 95;
 

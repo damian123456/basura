@@ -1,0 +1,47 @@
+<?php
+$config = array();
+$config['secure'] = true;
+$config['password'] = "medium";
+$config['admin'] = "admin";
+$config['homepage'] = "";
+$config['download_prefix'] = "";
+$config['download_suffix'] = "";
+$config['limitMBIP'] = 2000000;
+$config['ttl'] = 180;
+$config['limitPERIP'] = 1000;
+$config['ttl_ip'] = 1;
+$config['max_jobs_per_ip'] = 2000;
+$config['max_jobs'] = 5000;
+$config['max_load'] = 75;
+$config['max_size_default'] = 10240;
+$config['file_size_limit'] = 10240;
+$config['title'] = "[color=red]..::] DOWNLOAD [::..[/color]";
+$config['colorfilename'] = "black";
+$config['colorfilesize'] = "darkblue";
+$config['listfile'] = true;
+$config['showlinkdown'] = true;
+$config['showdirect'] = false;
+$config['redirectdl'] = false;
+$config['bbcode'] = true;
+$config['longurl'] = true;
+$config['privatefile'] = false;
+$config['privateip'] = false;
+$config['checkacc'] = true;
+$config['checklinksex'] = false;
+$config['rename'] = true;
+$config['delete'] = true;
+$config['display_error'] = false;
+$config['ziplink'] = false;
+$config['apiadf'] = "link api";
+$config['apirutgon'] = "link api";
+$config['Googlzip'] = false;
+$config['googleapikey'] = 'key api of google';
+$config['bitly'] = false;	
+$config['BitLylogin'] = 'username of bit.ly';
+$config['BitLyApi'] = 'key api of bit.ly';
+$config['badword'] = "porn, sex, hentai, xxx, jav";
+$config['language'] = "english";
+$config['skin'] = "blakskill";
+
+$config['mega_debrid_eu'] = false;
+?>
