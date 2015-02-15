@@ -35,7 +35,7 @@
 <?	
 		if($banners){
 ?>
-		<?/*<table class="table">
+		<table class="table">
 			<!-- On rows -->
 			<thead>
 				<tr class="active">
@@ -61,7 +61,7 @@
 				</tr>
 	<?		} ?>
 			</tbody>
-		</table>*/?>
+		</table>
 		<ul id="sortable_<?=$seccion['id']?>" class="row" style="list-style:none;margin:0;padding:0">
 <?		foreach($banners as $k => $banner){ ?>		
 		  <li id="banner_<?=$seccion['id']?>_<?=$banner['id']?>" class="col-sm-3">

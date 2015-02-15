@@ -21,12 +21,7 @@
 
 <form class="form-horizontal" role="form" method="post" action="">
 
-<? if($item){ ?>
-	<ul class="nav nav-pills">
-		<li class="active"><a href="#info" data-toggle="tab">Informaci&oacute;n</a></li>
-		<li><a href="#varieties" data-toggle="tab">Modalidades</a></li>
-	</ul>
-<? } ?>
+
 
 	<div class="tab-content">
 
@@ -41,14 +36,6 @@
 				</div>
 			</div>
 
-
-			<div class="form-group">
-
-				<label class="col-sm-2 control-label" for="excerpt">Resumen</label>
-				<div class="col-sm-10">
-					<textarea type="text" rows="4" class="form-control" id="excerpt" name="excerpt" placeholder="Resumen del contenido"><?=getValue($item,'excerpt')?></textarea>
-				</div>
-			</div>
 
 
 
@@ -175,12 +162,8 @@
 
 		<div class="col-sm-10 form-controls">
 			<button type="button" onclick="location.href='courses.php'" class="btn btn-default"><i class="fa fa-chevron-left"></i> Volver</button>
-<?		if($item){?>
-			<button type="submit" name="apply" class="btn btn-primary" >Aplicar</button>
-			<button type="submit" class="btn btn-primary" >Guardar y salir</button>
-<?		} else { ?>
-			<button type="submit" name="apply" class="btn btn-primary" >Guardar y Continuar <span class="fa fa-chevron-right"></button>
-<?		} ?>
+			<button type="submit" class="btn btn-primary" >Guardar <span class="fa fa-chevron-right"></button>
+
 			<input type="hidden" name="save" value="1" >
 			<input type="hidden" name="id" id="courseId" value="<?=$item['id']?>" >
 		</div>

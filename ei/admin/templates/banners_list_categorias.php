@@ -14,10 +14,6 @@
 	</div>
 	<div class="separador">&nbsp;</div>
 <?	if($categorias) foreach($categorias as $categoria){	?>
-
-	<div class="panel panel-default">
-	  <!-- Default panel contents -->
-	  <div class="panel-heading"><strong><?=$categoria['nombre']?></strong></div>
 <?		// Traemos los banners
 		$banners = $db->fetch_all("
 			SELECT b.*, s.nombre AS seccion, c.nombre AS categoria FROM banners AS b
@@ -29,17 +25,22 @@
 			GROUP BY b.id
 			ORDER BY b.orden
 		");
+		if($banners){
 ?>
+	<div class="panel panel-default">
+	  <!-- Default panel contents -->
+	  <div class="panel-heading"><strong><?=$categoria['nombre']?></strong></div>
+
 	<div class="panel-body" style="background:#f9f9f9">
 <?	
-		if($banners){
+		
 ?>
 		<ul id="sortablecat_<?=$categoria['id']?>" class="row" style="list-style:none;margin:0;padding:0">
 <?		foreach($banners as $k => $banner){ ?>		
 		  <li id="banner_<?=$categoria['id']?>_<?=$banner['id']?>" class="col-sm-3">
 			<div class="thumbnail">
 <?			if(!$banner['url_youtube']){	?>
-				<img src="<?=foto_url($banner['archivo'], 240, 160)?>" class="img-responsive" alt="...">
+				<img src="<?=$upload_dir.$banner['archivo']?>" width="326" height="317" class="img-responsive" alt="...">
 <?			}else{	
 				$pattern = '~(?:http|https|)(?::\/\/|)(?:www.|)(?:youtu\.be\/|youtube\.com(?:\/embed\/|\/v\/|\/watch\?v=|\/ytscreeningroom\?v=|\/feeds\/api\/videos\/|\/user\S*[^\w\-\s]|\S*[^\w\-\s]))([\w\-]{11})[a-z0-9;:@?&%=+\/\$_.-]*~i';
 				$youtube_id = (preg_replace($pattern, '$1', $banner['url_youtube']));
@@ -60,9 +61,7 @@
 		  </li>
 <?		} ?>
 		</ul>
-<?		}else{ ?>
-		<p class="text-center">No hay banners en esta categoría</p>
-<?		} ?>
 	</div>
+
 </div>
-<?	}	?>
+<?	}}	?>

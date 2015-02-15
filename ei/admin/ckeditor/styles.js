@@ -31,13 +31,13 @@ CKEDITOR.stylesSet.add( 'default', [
 	{ name: 'Preformatted Text',element: 'pre' },
 	{ name: 'Address',			element: 'address' },
 	*/
-	{ name: 'Titulo', element: 'h1', styles: { 'color': '#0c4883', 'font-family': 'Asap', 'font-style': 'italic', 'font-weight': 'bold', 'font-size': '32pt' } },
-    { name: 'Subtitulo' , element: 'h2', styles: { 'color': '#0c4883', 'font-family': 'Asap', 'font-size': '16pt' } },
+	{ name: 'Titulo', element: 'h1', styles: { 'color': '#0c4883', 'font-family': 'Asap', 'font-style': 'italic', 'font-weight': 'bold', 'font-size': '32px' } },
+    { name: 'Subtitulo' , element: 'h2', styles: { 'color': '#0c4883', 'font-family': 'Asap', 'font-size': '16px' } },
 
-	{ name: 'Cuerpo texto',		element: 'p', styles: { 'color': '#0c4883', 'font-family': 'Asap', 'font-size': '16pt' } },
-	{ name: 'Cuerpo blanco negrita',	element: 'p', styles: { 'color': '#f1efe3', 'font-family': 'Asap', 'font-size': '16pt', 'font-weight': 'bold' } },
-	{ name: 'Cuerpo blanco',	element: 'p', styles: { 'color': '#f1efe3', 'font-family': 'Asap', 'font-size': '16pt'} },
-	{ name: 'TEXTO RESALTADO',	element: 'p', styles: { 'color': '#0c4883', 'font-family': 'Asap', 'font-size': '16pt'} },
+	{ name: 'Cuerpo texto',		element: 'p', styles: { 'color': '#0c4883', 'font-family': 'Asap', 'font-size': '16px' } },
+	{ name: 'Cuerpo blanco negrita',	element: 'p', styles: { 'color': '#f1efe3', 'font-family': 'Asap', 'font-size': '16px', 'font-weight': 'bold' } },
+	{ name: 'Cuerpo blanco',	element: 'p', styles: { 'color': '#f1efe3', 'font-family': 'Asap', 'font-size': '16px'} },
+	{ name: 'TEXTO RESALTADO',	element: 'p', styles: { 'color': '#0c4883', 'font-family': 'Asap', 'font-size': '16px'} },
 	
 ] );
 

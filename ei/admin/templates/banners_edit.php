@@ -38,8 +38,8 @@
 			<div class="form-group">
 			<label class="col-sm-2 control-label">Imagen</label>
 			<div class="col-sm-10">
-<?			if(substr($banner['archivo'],-4)!='.mp4'){ ?>
-				<img src="<?=foto_url($banner['archivo'], $targ_w, $targ_h)?>" class="img-responsive" />
+<?			if($banner['archivo']){ ?>
+				<img src="<?=$upload_dir.$banner['archivo']?>" class="img-responsive" />
 <?			} else { ?>
 				<video id="videoPlayer" src="<?=$upload_dir.$banner['archivo']?>" width="<?=$targ_w?>" height="<?=$targ_h?>"></video>
 <?			} ?>

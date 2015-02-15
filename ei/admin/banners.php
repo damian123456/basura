@@ -3,8 +3,8 @@
 
 	$action = $_GET['action'];
 	$upload_dir = '../uploads/';
-	$targ_w = 474;
-	$targ_h = 251;
+	$targ_w = 326;
+	$targ_h = 317;
 	$img_quality = 95;
 
 	switch($_GET['msg_code']){
@@ -27,8 +27,8 @@
 				break;
 
 				case 'category':
-					$targ_w = 300;
-					$targ_h = 250;
+					$targ_w = 326;
+					$targ_h = 317;
 					break;
 			}
 			break;
@@ -159,7 +159,7 @@
 				$db->delete("DELETE FROM banners WHERE id = {$id_banner}");
 
 				if(!$db->error())
-					redirect('banners.php?msg_code=3');
+					redirect('banners.php?list=categoria');
 				else
 					$errores[] = $db->error();
 			}
@@ -253,13 +253,13 @@
 				$secciones = $db->fetch_all("SELECT * FROM secciones ORDER BY orden");
 
 				if($_GET['list']=='categoria'){
-					$id_categoria_cursos = $db->fetch_item_field("SELECT id FROM categorias WHERE nombre = 'cursos'");
+					$id_categoria_cursos = $db->fetch_item_field("SELECT id FROM categorias");//WHERE nombre = 'cursos'
 
 					if($id_categoria_cursos)
 						$categorias = $db->fetch_all("
 							SELECT * FROM categorias
-							WHERE parent = {$id_categoria_cursos}
-						");
+							
+						");//WHERE parent = {$id_categoria_cursos}
 					include 'templates/banners_list_categorias.php';
 				}else
 					include 'templates/banners_list.php';

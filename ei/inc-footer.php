@@ -45,6 +45,7 @@
                                 <li><a href="http://www.educaidiomaruso.blogspot.com" target="_blank">Ruso</a></li>
                                 <li><a href="http://www.educaidiomacastellano.blogspot.com.ar" target="_blank">Español</a></li>
                             </ul>
+                            <a href="javascript:;" class="scroll-up"><img src="img/arriba.png" alt=""></a>
                         </div>
                     </div>
                 </div>
@@ -101,19 +102,15 @@
         <script src="js/jquery.mCustomScrollbar.js"></script>
         <script src="js/jquery.flexslider.js"></script>
 		
-        <!--Start of Tawk.to Script-->
-        <script type="text/javascript">
-        var $_Tawk_API={},$_Tawk_LoadStart=new Date();
-        (function(){
-        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-        s1.async=true;
-        s1.src='https://embed.tawk.to/54bfe76c8db806621cd6a347/default';
-        s1.charset='UTF-8';
-        s1.setAttribute('crossorigin','*');
-        s0.parentNode.insertBefore(s1,s0);
-        })();
-        </script>
-        <!--End of Tawk.to Script-->
+        <!--Start of Zopim Live Chat Script-->
+<script type="text/javascript">
+window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
+$.src='//v2.zopim.com/?2n4fZPEEArt4TsD8qFVfDGxyWnaQ3TyI';z.t=+new Date;$.
+type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+</script>
+<!--End of Zopim Live Chat Script-->
 		
 
         <script language=JavaScript>
@@ -126,7 +123,7 @@
 var message="Copyright 2015 EDUCA IDIOMAS";
 
 ///////////////////////////////////
-function clickIE4(){
+/*function clickIE4(){
 if (event.button==2){
 alert(message);
 return false;
@@ -151,7 +148,7 @@ document.onmousedown=clickIE4;
 }
 
 document.oncontextmenu=new Function("alert(message);return false")
-
+*/
 // --> 
 </script><!-- Add mousewheel plugin (this is optional) -->
         <script type="text/javascript" src="fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
@@ -175,7 +172,11 @@ document.oncontextmenu=new Function("alert(message);return false")
         <script type="text/javascript" src="js/jquery.customSelect.js"></script>
         <script src="js/owl.carousel.js"></script>
         <script src="js/main.js"></script>
-
+        <script type="text/javascript">
+            $('.editor p').each(function() {
+                $(this).trim();
+            });
+        </script>
         <script type="text/javascript">
             jQuery(document).ready(function( $) {
               // Fancybox

@@ -36,12 +36,7 @@
         <link rel="apple-touch-icon" href="images/favicon.png"/>
         <link rel="icon" href="images/favicon.png" type="image/x-icon"/>
         <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon"/>
-        
-        <script language="javascript" type="text/javascript">
-          function resizeIframe(obj) {
-            obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
-          }
-        </script>
+
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
           <script src="js/respond.min.js"></script>
@@ -131,86 +126,6 @@
                 <img style="display: inline;" src="img/firulete-empresas3.png" alt="" class="firulete-empresas3">
             </div>
 <?
-        }elseif ($id == 82) {
-?>            
-            <div class="content-page">
-                <img style="display: inline;" src="img/firulete-examen-italiano-1.png" alt="" class="firulete-libreria-1">
-                <img style="display: inline;" src="img/firulete-examen-italiano-2.png" alt="" class="firulete-libreria-3">
-            </div>
-<?
-        }elseif ($id == 79) {
-?>            
-            <div class="content-page">
-                <img style="display: inline;" src="img/firulete-franquicias1.png" alt="" class="firulete-libreria-1">
-                <img style="display: inline;" src="img/firulete-inglaterra-agenda.png" alt="" class="firulete-libreria-3">
-            </div>
-<?
-        }elseif ($id == 16) {
-?>            
-            <div class="content-page">
-                <img style="display: inline;" src="img/firulete-examen-toefl-1.png" alt="" class="firulete-libreria-1">
-                <img style="display: inline;" src="img/firulete-examen-toefl-2.png" alt="" class="firulete-libreria-3">
-            </div>
-<?
-        }elseif ($id == 69) {
-?>            
-            <div class="content-page">
-                <img style="display: inline;" src="img/firulete-empresas1.png" alt="" class="firulete-empresas1">
-                <img style="display: inline;" src="img/firulete-empresas2.png" alt="" class="firulete-empresas2">
-                <img style="display: inline;" src="img/firulete-empresas3.png" alt="" class="firulete-empresas3">
-            </div>
-<?
-        }elseif ($id == 78) {
-?>            
-            <div class="content-page">
-                <img style="display: inline;" src="img/firulete-empresas1.png" alt="" class="firulete-empresas1">
-                <img style="display: inline;" src="img/firulete-empresas2.png" alt="" class="firulete-empresas2">
-                <img style="display: inline;" src="img/firulete-empresas3.png" alt="" class="firulete-empresas3">
-            </div>
-<?
-        }elseif ($id == 77) {
-?>            
-            <div class="content-page">
-                <img style="display: inline;" src="img/firulete-empresas1.png" alt="" class="firulete-empresas1">
-                <img style="display: inline;" src="img/firulete-empresas2.png" alt="" class="firulete-empresas2">
-                <img style="display: inline;" src="img/firulete-empresas3.png" alt="" class="firulete-empresas3">
-            </div>
-<?
-        }elseif ($id == 71) {
-?>            
-            <div class="content-page">
-                <img style="display: inline;" src="img/firulete-brasil-agenda.png" alt="" class="firulete-libreria-1">
-                <img style="display: inline;" src="img/firulete-quienes-4.png" alt="" class="firulete-libreria-3">
-            </div>
-<?
-        }elseif ($id == 76) {
-?>            
-            <div class="content-page">
-                <img style="display: inline;" src="img/firulete-libreria-1.png" alt="" class="firulete-libreria-1">
-                <img style="display: inline;" src="img/firulete-inglaterra-agenda.png" alt="" class="firulete-libreria-3">
-            </div>
-<?
-        }elseif ($id == 74) {
-?>            
-            <div class="content-page">
-                <img style="display: inline;" src="img/firulete-contacto-1.png" alt="" class="firulete-libreria-1">
-                <img style="display: inline;" src="img/firulete-inglaterra-agenda.png" alt="" class="firulete-libreria-3">
-            </div>
-<?
-        }elseif ($id == 75) {
-?>            
-            <div class="content-page">
-                <img style="display: inline;" src="img/firulete-franquicias1.png" alt="" class="firulete-libreria-1">
-                <img style="display: inline;" src="img/firulete-examen-frances-1.png" alt="" class="firulete-libreria-3">
-            </div>
-<?
-        }elseif ($id == 73) {
-?>            
-            <div class="content-page">
-                <img style="display: inline;" src="img/firulete-japones-examen.png" alt="" class="firulete-libreria-1">
-                <img style="display: inline;" src="img/firulete-libreria-2.png" alt="" class="firulete-libreria-3">
-            </div>
-<?
         }else{
 
 ?>
@@ -247,15 +162,14 @@
         <div class="container">    
             <div class="row">
                 <div class="editor col-xs-12 col-sm-8 col-md-8 col-lg-8">
-                    <iframe src="./editor.php?content=<?=$id?>" frameborder="0" onload='javascript:resizeIframe(this);' style="width:100%"></iframe>
 <?
-                /*if (isset($contenido)) {
+                if (isset($contenido)) {
                     echo $contenido['content'];
                 }
                 else{
 
                     echo 'CONTENIDO NO ENCONTRADO';
-                }*/
+                }
                 
 ?>
                 </div>

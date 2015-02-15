@@ -54,18 +54,19 @@
                     <h1 class="titulo-seccion in-libreria">Convenios</h1>
                     <p class="bajada">Actualmente, Educa Idiomas tiene importantes convenios educativos, con distintas instituciones y sindicatos de la ciudad y la zona, brindando grandes beneficios y capacitación profesional personalizada a sus alumnos.<br> Convenios:</p>
                 </div>
+
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <?$convenios = $db->fetch_all('SELECT * FROM clientes ORDER BY orden');
                 foreach ($convenios as $conv) {
                     if ($conv['activo'] == 1) {?>
-                    <a class="item" href="<?=$conv['url']?>" target="_blank" title="<?=$conv['nombre']?>"><img src="<?='uploads/'.$conv['archivo']?>" alt="Universidad Fasta"></a>
+                    <a class="item" href="<?=$conv['url']?>" target="_blank" title="<?=$conv['nombre']?>"><img style="margin-top: 10px;margin-left: 10px;" src="<?='uploads/'.$conv['archivo']?>" alt="<?=$conv['nombre']?>"></a>
                     <!--<a class="item" href="http://www.pastelerosmdq.com.ar" target="_blank"title="Sindicato Starpyh"><img src="uploads/starpyh.jpg" alt="Sindicato Starpyh"></a>
                      <a class="item" href="http://www.aotra.org.ar/" target="_blank" title="Sindicato Textiles"><img src="uploads/sindicato-textil.jpg" alt="Sindicato Textiles"></a>
                     <a class="item" href="http://www.foevaonline.com.ar/" target="_blank" title="Sindicato FOEVA"><img src="uploads/sindicato-foeva.jpg" alt=" Sindicato FOEVA"></a>-->
                    <?}
-                }?>
-					 
+                }?>					 
 				</div>
+                
 			</div>
 			<div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">

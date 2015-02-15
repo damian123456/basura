@@ -31,7 +31,7 @@
 				case 'categoria':
 					$db->update("UPDATE categorias SET orden = {$orden} WHERE id = {$id_item}");//categorias
 				break;
-				case 'curso':
+				case 'course':
 					$db->update("UPDATE courses SET position = {$orden} WHERE id = {$id_item}");
 				break;
 				case 'galeria':
