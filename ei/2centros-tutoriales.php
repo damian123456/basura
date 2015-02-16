@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -40,27 +41,28 @@
                     <h1 class="titulo-seccion-tn less-margin-bottom">Centros tutoriales</h1>
 					<p class="text margin-bottom-none">Consulte su representante más cercano.</p><br>
                     <div class="container-mapa">
-                        <img src="img/mapa-representantes.jpg" alt="">
+                        <?include("mapa.php");?>
+                        <!--<img src="img/mapa-representantes.jpg" alt="">-->
                     </div>
                     <p class="bajada-tn">El Instituto <span>Educa Idiomas</span>, junto a Aldeaglobal te permiten estudiar a distancia desde cualquier punto del país. Conocé nuestros centros tutoriales:</p>
 				 
                     <div class="panel-group panel-centros-tutoriales" id="accordion" role="tablist" aria-multiselectable="true">
                      <img src="img/filete2-centros.png" alt="" class="firulete-centro2">
                      <img src="img/filete3-centros.png" alt="" class="firulete-centro3">
-                     <!-- CABA --
-                        <?$caba = $db->fetch_all('SELECT * FROM cb');
-                          $repres = $db->fetch_all('SELECT * FROM representantes ORDER BY id DESC');
-                          foreach ($caba as $cb) {
-                            foreach ($repres as $re) {
-                              if ($re['ciudad'] == $cb['nombre']) {?>
-                                <div class="panel panel-default">
+
+                     <!-- CABA -->
+                        <?$repres = $db->fetch_all('SELECT * FROM representantes ORDER BY id DESC');?>
+                          <div class="panel panel-default">
                                   <div class="panel-heading" role="tab" id="headingOne">
                                     <h4 class="panel-title">
                                       <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        <?="Centros Tutoriales Educa idiomas  en ".$re['ciudad']?>
+                                        Centros Tutoriales Educa idiomas  en CABA
                                       </a>
                                     </h4>
                                   </div>
+                          <?foreach ($repres as $re) {
+                            if ($re['activo']==1) {
+                              if ($re['provincia'] == "Caba" || $re['provincia'] == "CABA" || $re['provincia'] == "Capital" && $re['provincia'] == "Mar del Plata") {?>
                                   <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                                     <div class="panel-body">
                                       <div class="box2">
@@ -68,15 +70,15 @@
                                       </div>
                                     </div>
                                   </div>
-                                </div>
                               <?}
+                              }
                             }
-                          }?>
+                          ?>
+                          </div>
                       <!--FIN CABA-->
 
                       <!--PROVINCIA DE BUENOS AIRES-->
-                      <?$pb = $db->fetch_all('SELECT * FROM pb'); // BASE DE DATOS CON CIUDAD, POSIBILIDADES
-                        $represe = $db->fetch_all('SELECT * FROM representantes ORDER BY id DESC'); // BASE DE DATOS CON REPRESENTANTES?>
+                      <?$represe = $db->fetch_all('SELECT * FROM representantes ORDER BY id DESC'); // BASE DE DATOS CON REPRESENTANTES?>
                         <div class="panel panel-default">
                                 <div class="panel-heading" role="tab" id="headingTwo">
                                   <h4 class="panel-title">
@@ -85,60 +87,57 @@
                                     </a>
                                   </h4>
                                 </div>
-                        <?foreach ($pb as $p) {
-                          foreach ($represe as $ree) {
-                            if ($ree['provincia'] == $p['nombre'] && $ree['ciudad']!= "Mar del Plata" && !empty($ree['provincia'])) {?>
                                 <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                                   <div class="panel-body">
+                        <?foreach ($represe as $ree) {
+                            if ($ree['activo'] == 1) {
+                            if ($ree['provincia'] == "Buenos Aires" && $ree['ciudad']!= "Mar del Plata") {?>
                                     <div class="box2">
                                         <?=$ree['nombre']." ".$ree['direccion']." ".$ree['ciudad']." ".$ree['telefono']?>
-                                    </div>
-                                  </div>
-                                </div>
-                                   
+                                    </div>                                   
                             <?}
+                           }
                           }
-                        }?>
+                        ?>
+                                  </div>
+                            </div>
                         </div> 
                       <!--FIN PROVINCIA DE BUENOS AIRES-->
 
-                      <!--MENDOZA--
-                      <?$mdza = $db->fetch_all('SELECT * FROM mdza'); // BASE DE DATOS CON CIUDAD, POSIBILIDADES
-                        $represent = $db->fetch_all('SELECT * FROM representantes ORDER BY id DESC'); // BASE DE DATOS CON REPRESENTANTES
-                        foreach ($mdza as $m) {
-                          foreach ($represent as $reee) {
-                            if ($reee['provincia'] == $m['nombre']) {?>
+                      <!--MENDOZA-->
+                      <?$represent = $db->fetch_all('SELECT * FROM representantes ORDER BY id DESC'); // BASE DE DATOS CON REPRESENTANTES?>
                               <div class="panel panel-default">
                                 <div class="panel-heading" role="tab" id="headingThree">
                                   <h4 class="panel-title">
                                     <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                      <?="Centros Tutoriales Educa idiomas  en ".$reee['provincia']?>
+                                      Centros Tutoriales Educa idiomas  en la provincia de Mendoza
                                     </a>
                                   </h4>
                                 </div>
                                 <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                                   <div class="panel-body">
+                        <?foreach ($represent as $reee) {
+                            if ($reee['activo']==1) {
+                              if ($reee['provincia'] == "Mendoza") {?>
                                     <div class="box2 con-border">
                                         <?=$reee['nombre']." ".$reee['direccion']." ".$reee['telefono']?>
-                                    </div>
-                                  </div>
-                                </div>     
+                                    </div>    
                             <?}
+                           }
                           }
-                        }?>
+                        ?>
+                                 </div>
+                          </div> 
+                        </div>
                         <!--FIN MENDOZA-->
-
-                      </div>
                     </div>
 
                  </div>
 				 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
          <?$cont = true;
-         $ciud = $db->fetch_all('SELECT * FROM cp');
-         foreach ($ciud as $cp) {
               $repre = $db->fetch_all('SELECT * FROM representantes ORDER BY id DESC');
               foreach ($repre as $rep) {
-              if($rep['ciudad'] == $cp['provincia']){
+              if($rep['ciudad'] == "Mar del Plata"){
                     if($cont){?>
                     <h4 class="ttl-centros">Instituto EDUCA IDIOMAS en  Mar del Plata</h4>
                     <?$cont = false;
@@ -152,7 +151,7 @@
 
             <?}  
             }
-        }?>
+        ?>
                     <!--<div class="box-blue-centros">
                         <b>Sede central</b>
                         <p>Av. Juan José Paso 3420 <br>
@@ -169,5 +168,6 @@
             </div>
         </div>
         <?php include("inc-footer.php"); ?>
+        <script src="js/locations.min.js"></script>
     </body>
 </html>
