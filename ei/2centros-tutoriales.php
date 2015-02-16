@@ -47,69 +47,94 @@
                     <div class="panel-group panel-centros-tutoriales" id="accordion" role="tablist" aria-multiselectable="true">
                      <img src="img/filete2-centros.png" alt="" class="firulete-centro2">
                      <img src="img/filete3-centros.png" alt="" class="firulete-centro3">
-                      <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="headingOne">
-                          <h4 class="panel-title">
-                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                              Centros Tutoriales Educa idiomas  en Caba
-                            </a>
-                          </h4>
-                        </div>
-                        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                          <div class="panel-body">
-                            <div class="box2">
-                                San Rafael   Institut. Barcala 87. San Rafael. Tel: 0260 443 5937
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="headingTwo">
-                          <h4 class="panel-title">
-                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                              Centros Tutoriales Educa idiomas  en la pcia de Buenos Aires
-                            </a>
-                          </h4>
-                        </div>
-                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                          <div class="panel-body">
-                            <div class="box2">
-                                San Rafael   Institut. Barcala 87. San Rafael. Tel: 0260 443 5937
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="headingThree">
-                          <h4 class="panel-title">
-                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                              Centros Tutoriales Educa idiomas  en la pcia de Mendoza
-                            </a>
-                          </h4>
-                        </div>
-                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                          <div class="panel-body">
-                            <div class="box2 con-border">
-                                Education. Zeballos 355 casi esquina Chaperouge. Gral. Alvear. 02625 42 5831/4756012
-                            </div>
-                            <div class="box2 con-border">
-                                Malar, Inalicán 300 1er piso Ala Norte. Malargue. tel: 02625 Tel: 02604 470064
-                            </div>
-                            <div class="box2 con-border">
-                                Mendoza (solo Bachillerato). Peltier 50 Local 1. Mendoza. Tel: 0261 424 7599/424 6240
-                            </div>
-                            <div class="box2">
-                                San Rafael   Institut. Barcala 87. San Rafael. Tel: 0260 443 5937
-                            </div>
-                          </div>
-                        </div>
+                     <!-- CABA --
+                        <?$caba = $db->fetch_all('SELECT * FROM cb');
+                          $repres = $db->fetch_all('SELECT * FROM representantes ORDER BY id DESC');
+                          foreach ($caba as $cb) {
+                            foreach ($repres as $re) {
+                              if ($re['ciudad'] == $cb['nombre']) {?>
+                                <div class="panel panel-default">
+                                  <div class="panel-heading" role="tab" id="headingOne">
+                                    <h4 class="panel-title">
+                                      <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <?="Centros Tutoriales Educa idiomas  en ".$re['ciudad']?>
+                                      </a>
+                                    </h4>
+                                  </div>
+                                  <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                    <div class="panel-body">
+                                      <div class="box2">
+                                          <?=$re['nombre']." ".$re['direccion']." ".$re['ciudad']." ".$re['telefono']?>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              <?}
+                            }
+                          }?>
+                      <!--FIN CABA-->
+
+                      <!--PROVINCIA DE BUENOS AIRES-->
+                      <?$pb = $db->fetch_all('SELECT * FROM pb'); // BASE DE DATOS CON CIUDAD, POSIBILIDADES
+                        $represe = $db->fetch_all('SELECT * FROM representantes ORDER BY id DESC'); // BASE DE DATOS CON REPRESENTANTES?>
+                        <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingTwo">
+                                  <h4 class="panel-title">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                      Centros Tutoriales Educa idiomas  en la provincia de Buenos Aires
+                                    </a>
+                                  </h4>
+                                </div>
+                        <?foreach ($pb as $p) {
+                          foreach ($represe as $ree) {
+                            if ($ree['provincia'] == $p['nombre'] && $ree['ciudad']!= "Mar del Plata" && !empty($ree['provincia'])) {?>
+                                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                  <div class="panel-body">
+                                    <div class="box2">
+                                        <?=$ree['nombre']." ".$ree['direccion']." ".$ree['ciudad']." ".$ree['telefono']?>
+                                    </div>
+                                  </div>
+                                </div>
+                                   
+                            <?}
+                          }
+                        }?>
+                        </div> 
+                      <!--FIN PROVINCIA DE BUENOS AIRES-->
+
+                      <!--MENDOZA--
+                      <?$mdza = $db->fetch_all('SELECT * FROM mdza'); // BASE DE DATOS CON CIUDAD, POSIBILIDADES
+                        $represent = $db->fetch_all('SELECT * FROM representantes ORDER BY id DESC'); // BASE DE DATOS CON REPRESENTANTES
+                        foreach ($mdza as $m) {
+                          foreach ($represent as $reee) {
+                            if ($reee['provincia'] == $m['nombre']) {?>
+                              <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingThree">
+                                  <h4 class="panel-title">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                      <?="Centros Tutoriales Educa idiomas  en ".$reee['provincia']?>
+                                    </a>
+                                  </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                  <div class="panel-body">
+                                    <div class="box2 con-border">
+                                        <?=$reee['nombre']." ".$reee['direccion']." ".$reee['telefono']?>
+                                    </div>
+                                  </div>
+                                </div>     
+                            <?}
+                          }
+                        }?>
+                        <!--FIN MENDOZA-->
+
                       </div>
                     </div>
 
                  </div>
 				 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
          <?$cont = true;
-         $ciud = $db->fetch_all('SELECT * FROM cp ORDER BY id DESC');
+         $ciud = $db->fetch_all('SELECT * FROM cp');
          foreach ($ciud as $cp) {
               $repre = $db->fetch_all('SELECT * FROM representantes ORDER BY id DESC');
               foreach ($repre as $rep) {
