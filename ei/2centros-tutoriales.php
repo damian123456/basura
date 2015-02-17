@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -20,6 +19,7 @@
         <link rel="apple-touch-icon" href="images/favicon.png"/>
         <link rel="icon" href="images/favicon.png" type="image/x-icon"/>
         <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon"/>
+        <script src="js/vendor/modernizr.min.js"></script>
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -41,7 +41,8 @@
                     <h1 class="titulo-seccion-tn less-margin-bottom">Centros tutoriales</h1>
 					<p class="text margin-bottom-none">Consulte su representante más cercano.</p><br>
                     <div class="container-mapa">
-                        <?include("mapa.php");?>
+                        <?/*include("mapa.php");*/?>
+                        <iframe src="https://www.google.com/maps/d/embed?mid=zmUopf-obA50.k-SAhFmfiHMM&z=3&output=html" width="607" height="422"></iframe>
                         <!--<img src="img/mapa-representantes.jpg" alt="">-->
                     </div>
                     <p class="bajada-tn">El Instituto <span>Educa Idiomas</span>, junto a Aldeaglobal te permiten estudiar a distancia desde cualquier punto del país. Conocé nuestros centros tutoriales:</p>
@@ -66,7 +67,7 @@
                                   <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                                     <div class="panel-body">
                                       <div class="box2">
-                                          <?=$re['nombre']." ".$re['direccion']." ".$re['ciudad']." ".$re['telefono']?>
+                                          <?=$re['nombre']." ".$re['direccion']." ".$re['ciudad'].". Tel. ".$re['telefono']?>
                                       </div>
                                     </div>
                                   </div>
@@ -93,7 +94,7 @@
                             if ($ree['activo'] == 1) {
                             if ($ree['provincia'] == "Buenos Aires" && $ree['ciudad']!= "Mar del Plata") {?>
                                     <div class="box2">
-                                        <?=$ree['nombre']." ".$ree['direccion']." ".$ree['ciudad']." ".$ree['telefono']?>
+                                        <?=$ree['nombre']." ".$ree['direccion']." ".$ree['ciudad'].". Tel. ".$ree['telefono']?>
                                     </div>                                   
                             <?}
                            }
@@ -120,7 +121,7 @@
                             if ($reee['activo']==1) {
                               if ($reee['provincia'] == "Mendoza") {?>
                                     <div class="box2 con-border">
-                                        <?=$reee['nombre']." ".$reee['direccion']." ".$reee['telefono']?>
+                                        <?=$reee['nombre']." ".$reee['direccion'].". Tel. ".$reee['telefono']?>
                                     </div>    
                             <?}
                            }
@@ -169,5 +170,8 @@
         </div>
         <?php include("inc-footer.php"); ?>
         <script src="js/locations.min.js"></script>
+        <script>
+          $( ".i4ewOd-pzNkMb-haAclf qAWA2" ).hide();
+        </script>
     </body>
 </html>

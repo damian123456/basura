@@ -116,7 +116,7 @@
                 <img style="display: inline;" src="img/firulete-cursos-espanol-2.png" alt="" class="firulete-cursos-chino-2">
             </div>
 <?
-        }elseif ($id == 70) {
+        }elseif ($id == 94 ) {
 ?>            
             <div class="content-page">
                 <img style="display: inline;" src="img/firulete-brasil-agenda.png" alt="" class="firulete-libreria-1">
@@ -211,6 +211,41 @@
                 <img style="display: inline;" src="img/firulete-libreria-2.png" alt="" class="firulete-libreria-3">
             </div>
 <?
+        }elseif ($id == 88) {
+?>            
+            <div class="content-page">
+                <img style="display: inline;" src="img/firulete-examen-frances-1.png" alt="" class="firulete-libreria-1">
+                <img style="display: inline;" src="img/firulete-examen-frances-2.png" alt="" class="firulete-libreria-3">
+            </div>
+<?
+        }elseif ($id == 70) {
+?>            
+            <div class="content-page">
+                <img style="display: inline;" src="img/firulete-aleman-goethe.png" alt="" class="firulete-libreria-1">
+                <img style="display: inline;" src="img/firulete-aleman-goethe-2.png" alt="" class="firulete-libreria-3">
+            </div>
+<?
+        }elseif ($id == 90) {
+?>            
+            <div class="content-page">
+                <img style="display: inline;" src="img/firulete-examen-chino-1.png" alt="" class="firulete-libreria-1">
+                <img style="display: inline;" src="img/firulete-examen-chino-2.png" alt="" class="firulete-libreria-3">
+            </div>
+<?
+        }elseif ($id == 91) {
+?>            
+            <div class="content-page">
+                <img style="display: inline;" src="img/firulete-japones-examen.png" alt="" class="firulete-libreria-1">
+                <img style="display: inline;" src="img/firulete-japones-examen-2.png" alt="" class="firulete-libreria-3">
+            </div>
+<?
+        }elseif ($id == 92) {
+?>            
+            <div class="content-page">
+                <img style="display: inline;" src="img/firulete-examen-espanol-1.png" alt="" class="firulete-libreria-1">
+                <img style="display: inline;" src="img/firulete-examen-espanol-2.png" alt="" class="firulete-libreria-3">
+            </div>
+<?
         }else{
 
 ?>
@@ -225,7 +260,7 @@
         <div class="container container-slider container-slider-empresas">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-
+                    
                     
                     
                     <div class="flexslider-empresas">
@@ -260,6 +295,8 @@
 ?>
                 </div>
                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+
+
 <?
                     foreach ($banners as $b) {
                         

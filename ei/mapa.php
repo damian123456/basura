@@ -1,3 +1,1 @@
-<div class="thumb map-container animate">
-	<div data-zoom="3" data-lat="-38.0152562" data-lng="-57.5714236" data-controls="false" class="map"></div>
-</div>
+<iframe src="https://www.google.com/maps/d/embed?mid=zmUopf-obA50.k-SAhFmfiHMM&z=nn" width="607" height="422"></iframe>
