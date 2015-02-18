@@ -3,9 +3,20 @@ include("includes/init.php");
     function print_children($children){
         if($children) { ?>
             
-<?      foreach($children as $c){ ?>
+<?      foreach($children as $c){ 
+
+            if ($c['parent'] == 14 && $c['id'] != 72) {
+?>
+                <li><a href="<?=$c['link']?>"><?=$c['nombre']?></a></li>
+<?               
+            }else{
+?>
+                <li><a href="2content.php?content=<?=$c['id']?>&category=<?=$c['parent']?>"><?=$c['nombre']?></a></li>
+<?  
+            }
+?>
                 
-                    <li><a href="2content.php?content=<?=$c['id']?>&category=<?=$c['parent']?>"><?=$c['nombre']?></a></li>
+                    
                     
 <?          } ?>
 <?      } ?>

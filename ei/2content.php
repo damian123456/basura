@@ -145,7 +145,7 @@
                 <img style="display: inline;" src="img/firulete-inglaterra-agenda.png" alt="" class="firulete-libreria-3">
             </div>
 <?
-        }elseif ($id == 16) {
+        }elseif ($id == 80) {
 ?>            
             <div class="content-page">
                 <img style="display: inline;" src="img/firulete-examen-toefl-1.png" alt="" class="firulete-libreria-1">
@@ -246,6 +246,13 @@
                 <img style="display: inline;" src="img/firulete-examen-espanol-2.png" alt="" class="firulete-libreria-3">
             </div>
 <?
+        }elseif ($id == 93) {
+?>            
+            <div class="content-page">
+                <img style="display: inline;" src="img/firulete-examen-italiano-1.png" alt="" class="firulete-libreria-1">
+                <img style="display: inline;" src="img/firulete-examen-frances-1.png" alt="" class="firulete-libreria-3">
+            </div>
+<?
         }else{
 
 ?>
@@ -281,45 +288,189 @@
         </div>
         <div class="container">    
             <div class="row">
-                <div class="editor col-xs-12 col-sm-8 col-md-8 col-lg-8">
-                    <iframe src="./editor.php?content=<?=$id?>" frameborder="0" onload='javascript:resizeIframe(this);' style="width:100%"></iframe>
+
 <?
-                /*if (isset($contenido)) {
-                    echo $contenido['content'];
+                if ($id == 72) {
+                    $medida = "col-sm-12 col-md-12 col-lg-12";
                 }
                 else{
-
-                    echo 'CONTENIDO NO ENCONTRADO';
-                }*/
+                    $medida = "col-sm-8 col-md-8 col-lg-8";
+                }
                 
 ?>
+                <div class="editor col-xs-12 <?=$medida?>">
+                    <iframe src="./editor.php?content=<?=$id?>" frameborder="0" onload='javascript:resizeIframe(this);' style="width:100%"></iframe>
                 </div>
+<?
+                if ($id != 72) {
+                    # code...
+              
+?>
+
                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 
 
 <?
-                    foreach ($banners as $b) {
+                    if ($banners) {
+                        foreach ($banners as $b) {
                         
-                        if(!$b['url_youtube']){    
-?>
-                            <div class="foto-empresas">
-                                <img src="uploads/<?=$b['archivo']?>" alt="">
-                            </div>
-<?
-                        }else{  
-                            $pattern = '~(?:http|https|)(?::\/\/|)(?:www.|)(?:youtu\.be\/|youtube\.com(?:\/embed\/|\/v\/|\/watch\?v=|\/ytscreeningroom\?v=|\/feeds\/api\/videos\/|\/user\S*[^\w\-\s]|\S*[^\w\-\s]))([\w\-]{11})[a-z0-9;:@?&%=+\/\$_.-]*~i';
-                            $youtube_id = (preg_replace($pattern, '$1', $b['url_youtube']));
-?>
-                            <div class="foto-empresas">
-                                <iframe width="100%" class="img-responsive" src="//www.youtube.com/embed/<?=$youtube_id?>" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            
-<?                      }
+                            if(!$b['url_youtube']){    
+    ?>
+                                <div class="foto-empresas">
+                                    <img src="uploads/<?=$b['archivo']?>" alt="">
+                                </div>
+    <?
+                            }else{  
+                                $pattern = '~(?:http|https|)(?::\/\/|)(?:www.|)(?:youtu\.be\/|youtube\.com(?:\/embed\/|\/v\/|\/watch\?v=|\/ytscreeningroom\?v=|\/feeds\/api\/videos\/|\/user\S*[^\w\-\s]|\S*[^\w\-\s]))([\w\-]{11})[a-z0-9;:@?&%=+\/\$_.-]*~i';
+                                $youtube_id = (preg_replace($pattern, '$1', $b['url_youtube']));
+    ?>
+                                <div class="foto-empresas">
+                                    <iframe width="100%" class="img-responsive" src="//www.youtube.com/embed/<?=$youtube_id?>" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                                
+    <?                      }
 
+                        }
+                    }elseif ($id == 94) {
+?>
+                        <div class="foto-empresas foto-empresas-top">
+                            <a href="http://portal.mec.gov.br/index.php?option=com_content&amp;id=12270&amp;Itemid=518" target="_blank"><img src="img/celpe-bras.jpg" alt="">
+                        </a></div>
+<?
+                    }elseif ($id == 79) {
+?>
+                        <div class="foto-empresas foto-empresas-top">
+                            <a href="http://www.cambridgeenglish.org/es/exams-and-qualifications/first/" target="_blank"><img src="img/fce.jpg" alt="">
+                        </a></div>
+<?
+                    }elseif ($id == 80) {
+?>
+                        <div class="foto-empresas foto-empresas-top">
+                            <a href="http://www.ets.org/toefl" target="_blank"><img src="img/toefl.jpg" alt="">
+                        </a></div>
+<?
+                    }elseif ($id == 82) {
+?>
+                        <div class="foto-empresas foto-empresas-top">
+                            <a href="http://cils.unistrasi.it/" target="_blank"><img src="img/CILS5.jpg" alt="">
+                        </a></div>
+<?
+                    }elseif ($id == 88) {
+?>
+                        <div class="foto-empresas foto-empresas-top">
+                            <a href="http://www3.ciep.fr/travaux/index.html" target="_blank"><img src="img/delf.gif" alt="">
+                        </a></div>
+<?
+                    }elseif ($id == 70) {
+?>
+                        <div class="foto-empresas foto-empresas-top">
+                            <a href="http://www.goethe.de/lrn/prj/pba/bes/esindex.htm" target="_blank"><img src="img/goethe.jpg" alt="">
+                        </a></div>
+<?
+                    }elseif ($id == 90) {
+?>
+                        <div class="foto-empresas foto-empresas-top">
+                            <a href="http://www.cii.ie/cn/index.php/2014-03-07-17-53-48/hsk" target="_blank"><img src="img/hsk-logo.jpg" alt="">
+                        </a></div>
+<?
+                    }elseif ($id == 91) {
+?>
+                        <div class="foto-empresas foto-empresas-top">
+                            <a href="http://www.jlpt.jp/index.html" target="_blank"><img src="img/examen-japones.jpg" alt="">
+                        </a></div>
+<?
+                    }elseif ($id == 92) {
+?>
+                        <div class="foto-empresas foto-empresas-top">
+                            <a href="http://www.celu.edu.ar/" target="_blank"><img src="img/celu.jpg" alt="">
+                        </a></div>
+<?
+                    }elseif ($id == 69) {
+?>
+                        <div class="foto-empresas foto-empresas-top">
+                            <img src="img/empresas1.jpg" alt="">
+                        </div>
+                        <div class="foto-empresas">
+                            <img src="img/empresas2.jpg" alt="">
+                        </div>
+                        <div class="foto-empresas">
+                            <img src="img/empresas3.jpg" alt="">
+                        </div>
+                        <div class="foto-empresas">
+                            <img src="img/empresas4.jpg" alt="">
+                        </div>
+<?
+                    }elseif ($id == 77) {
+?>
+                        <div class="foto-empresas foto-empresas-top">
+                            <img src="img/traducciones-mardelplata-1.jpg" alt="">
+                        </div>
+                        <div class="foto-empresas">
+                            <img src="img/traducciones-mardelplata-2.jpg" alt="">
+                        </div>
+                        <div class="foto-empresas">
+                            <img src="img/traducciones-educaidiomas-3.jpg" alt="">
+                        </div>
+<?
+                    }elseif ($id == 78) {
+?>
+                        <div class="foto-empresas foto-empresas-top">
+                            <img src="img/interpretes-en-vivo-mardelplata.jpg" alt="">
+                        </div>
+                        <div class="foto-empresas">
+                            <img src="img/interpretes-idiomas-mardelplata-2.jpg" alt="">
+                        </div>
+<?
+                    }elseif ($id == 71) {
+?>
+                        <div class="foto-empresas foto-empresas-top">
+                            <img src="img/nivelacion.jpg" alt="">
+                        </div>
+<?
+                    }elseif ($id == 73) {
+?>
+                        <div class="foto-empresas foto-empresas-top">
+                            <img src="img/tutorias.jpg" alt="">
+                        </div>
+<?
+                    }elseif ($id == 74) {
+?>
+                        <div class="foto-empresas foto-empresas-top">
+                            <img src="img/curso-colegios1.jpg" alt="">
+                        </div>
+                        <div class="foto-empresas">
+                            <img src="img/curso-colegios-2.jpg" alt="">
+                        </div>
+<?
+                    }elseif ($id == 75) {
+?>
+                        <div class="foto-empresas foto-empresas-top">
+                            <img src="img/apoyo-universidades.jpg" alt="">
+                        </div>
+<?
+                    }elseif ($id == 76) {
+?>
+                        <div class="foto-empresas foto-empresas-top">
+                            <img src="img/apoyo-escolar.jpg" alt="">
+                        </div>
+                        <div class="foto-empresas">
+                            <img src="img/apoyo-ingreso-universidad-2.jpg" alt="">
+                        </div>
+<?
+                    }elseif ($id == 93) {
+?>
+                        <div class="foto-empresas foto-empresas-top">
+                            <img src="img/biblioteca-educaidiomas.jpg" alt="">
+                        </div>
+<?
                     }
+                    
 ?>
                     
                 </div>
+<?
+                }
+?>
             </div>
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">

@@ -178,7 +178,7 @@ require_once("../includes/config.php");//agregue
 				case 'edit': // Si estamos editando un representante
 					$representante = $db->fetch_item("
 					SELECT r.*, c.id AS id_pais FROM representantes AS r
-						LEFT JOIN Country AS c
+						LEFT JOIN country AS c
 						ON c.id = r.id_pais
 					WHERE r.id = {$id}
 					");
