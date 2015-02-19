@@ -2,19 +2,27 @@
 include("includes/init.php");
     function print_children($children){
         if($children) { ?>
-            <ul>
-<?      foreach($children as $c){ ?>
-                <li <?if($c['children']){?>class="submenu"<?}?>>
-<?          if($c['id_course']){ ?>
-                    <a href="<?=url(limpiarUrl($c['parent_name']).'/'.limpiarUrl($c['slug_category']).'/'.$c['id_course'].'-'.limpiarUrl($c['nombre']))?>"><?=$c['nombre']?></a>
-<?          } else { ?>
-                    <a href="#"><?=$c['nombre']?></a>
-                    <?print_children($c['children'])?>
+            
+<?      foreach($children as $c){ 
+
+            if ($c['parent'] == 14 && $c['id'] != 72) {
+?>
+                <li><a href="<?=$c['link']?>"><?=$c['nombre']?></a></li>
+<?               
+            }else{
+?>
+                <li><a href="2content.php?content=<?=$c['id']?>&category=<?=$c['parent']?>"><?=$c['nombre']?></a></li>
+<?  
+            }
+?>
+                
+                    
+                    
 <?          } ?>
 <?      } ?>
-            </ul>
+            
 <?  }
-    }
+    
 
     $tmp_cats = $db->fetch_all("SELECT * FROM categorias ORDER BY parent, orden, id");
     if(is_array($tmp_cats)) {
@@ -76,100 +84,37 @@ include("includes/init.php");
                       </button>
                     </div>
 
+                    <!--MENU:-->
+
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="quienes-somos.php" class="btn-verde">Institucional</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle btn-verde-oscuro" data-toggle="dropdown" role="button" aria-expanded="false">Idiomas <span class="caret"></span></a>
-                                <ul class="dropdown-menu dropdown-verde-oscuro" role="menu">
-                                    <li><a href="http://educaidiomas.com.ar/nuestros-cursos.php">Nuestros Cursos</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="#">Horarios de los Cursos</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="http://educaidiomas.com.ar/cursos-portugues.php">Aprende Portugués</a></li>
-									 <li class="divider"></li>
-                                    <li><a href="http://educaidiomas.com.ar/cursos-ingles.php">Aprende Inglés</a></li>
-									 <li class="divider"></li>
-                                    <li><a href="http://educaidiomas.com.ar/cursos-italiano.php">Aprende Italiano</a></li>
-									 <li class="divider"></li>
-                                    <li><a href="http://educaidiomas.com.ar/cursos-frances.php">Aprende Francés</a></li>
-									 <li class="divider"></li>
-                                    <li><a href="http://educaidiomas.com.ar/cursos-aleman.php">Aprende Alemán</a></li>
-									<li class="divider"></li>
-                                    <li><a href="http://educaidiomas.com.ar/cursos-chino.php">Aprende Chino</a></li>
-									<li class="divider"></li>
-                                    <li><a href="http://educaidiomas.com.ar/cursos-japones.php">Aprende Japonés</a></li>
-									<li class="divider"></li>
-                                    <li><a href="http://educaidiomas.com.ar/cursos-ruso.php">Aprende Ruso</a></li>
-									<li class="divider"></li>
-                                    <li><a href="http://educaidiomas.com.ar/cursos-espanol.php">Aprende Español</a></li>
-                                </ul>
-                            </li>
 
-                            <?/* ACA LAS TRAE:
-                            foreach($cats as $c){ ?>
-                                <li>
-                                        <a href="#"><?=$c['nombre']?></a>
+                        <!--PATRON DE COLORES DE LOS BOTONES -->
+                        <? $cols = array("btn-verde", "btn-verde-oscuro", "btn-petroleo","btn-magenta", "btn-violeta", "btn-rojo", "btn-naranja");
+                            $cols_drop = array("dropdown-verde", "dropdown-verde-oscuro", "dropdown-petroleo","dropdown-magenta", "dropdown-violeta", "dropdown-rojo", "dropdown-naranja"); 
+                           $recorrido = 0;?>
+
+                        
+                        <?foreach($cats as $c){?>
+                            <?if (!empty($c['children'])) {?>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle <?echo $cols[$recorrido];?>" data-toggle="dropdown" role="button" aria-expanded="false"><?=$c['nombre']?> <span class="caret"></span></a>
+                                    <ul class="dropdown-menu <?echo $cols_drop[$recorrido];?>" role="menu">
                                         <?print_children($c['children'])?>
+                                        
+                                                                      
+                                        <li class="divider"></li>
+                                    </ul>
                                 </li>
-<?                          }*/ ?>
-
-                            <li><a href="cursos-online.php" class="btn-petroleo">Cursos Online</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle btn-magenta" data-toggle="dropdown" role="button" aria-expanded="false">Exámenes Internacionales <span class="caret"></span></a>
-                                <ul class="dropdown-menu dropdown-magenta" role="menu">
-                                    <li><a href="examenes-celpe-bras.php">Celpe Bras</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="examenes-first-certificate.php">First Certificate</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="examenes-toefl.php">Toefl</a></li>
-									<li class="divider"></li>
-									<li><a href="examenes-italiano.php">CILS</a></li>
-                                    <li class="divider"></li>
-                                   	<li><a href="examenes-frances.php">DELF/DALF</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="examenes-goethe.php">Goethe-Institut</a></li>
-                                    <li class="divider"></li>
-									<li><a href="examenes-chino.php">HSK</a></li>
-									<li class="divider"></li>
-									<li><a href="examenes-japones.php">NŌKEN (JLPT)</a></li>
-									 <li class="divider"></li>
-                                    <li><a href="examenes-espanol.php">CELU</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle btn-violeta" data-toggle="dropdown" role="button" aria-expanded="false">Empresas <span class="caret"></span></a>
-                                <ul class="dropdown-menu dropdown-violeta" role="menu">
-                                    <li><a href="empresas.php">Curso para Empresas</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="traducciones.php">Traducciones</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="interpretes.php">Intérpretes</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle btn-rojo" data-toggle="dropdown" role="button" aria-expanded="false">Servicios <span class="caret"></span></a>
-                                <ul class="dropdown-menu dropdown-rojo" role="menu">
-                                    <li><a href="nivelacion.php">Nivelación</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="tutorias.php">Tutorías</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="cursos-colegios.php">Cursos para Colegios</a></li>
-									<li class="divider"></li>
-                                    <li><a href="cursos-universidades.php">Cursos para Universidades</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="apoyo-escolar.php">Clases de Apoyo Escolar</a></li>
-                                    <li class="divider"></li>
-									<li><a href="libreria-portada.php">Librería</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="biblioteca.php">Biblioteca</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="contacto.php" class="btn-naranja">Contacto</a></li>
-                        </ul>
+                            <?}else{?>
+                                <li><a href="<?=$c['link']?>" class="<?echo $cols[$recorrido];?>"><?=$c['nombre']?></a></li>
+                                <?}
+                                $recorrido++;?>
+                            <?} /*FIN FOREACH*/ ?>
+                        </ul>                       
                     </div><!-- /.navbar-collapse -->
+                    <!--FIN  MENU-->
                 </div><!-- /.container-fluid -->
             </nav>
         </header>
