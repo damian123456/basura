@@ -171,11 +171,11 @@ $config["scope"] = array(
 		"submenu" => array(
 			array(
 				"link" => "clientes.php",
-				"nombre" => "Listado de Clientes"
+				"nombre" => "Listado de Convenios"
 			),
 			array(
 				"link" => "clientes.php?action=new",
-				"nombre" => "Agregar Cliente"
+				"nombre" => "Agregar Convenio"
 			)
 		)
 	),
@@ -198,16 +198,16 @@ $config["scope"] = array(
 	"representantes" => array(
 		"actions" => array("activate", "deactivate", "remove", "confirm-remove"),
 		"current" => 6,
-		"nombre" => "Representantes",
+		"nombre" => "Centros tutoriales",
 		"link" => "representantes.php",
 		"submenu" => array(
 			array(
 				"link" => "representantes.php",
-				"nombre" => "Listado de Representantes"
+				"nombre" => "Listado de Centros tutoriales"
 			),
 			array(
 				"link" => "representantes.php?action=new",
-				"nombre" => "Agregar Representante"
+				"nombre" => "Agregar Centros tutoriales"
 			)
 		)
 	),

@@ -11,7 +11,7 @@ include("includes/init.php");
 <?               
             }else{
 ?>
-                <li><a href="2content.php?content=<?=$c['id']?>&category=<?=$c['parent']?>"><?=$c['nombre']?></a></li>
+                <li><a href="content.php?content=<?=$c['id']?>&category=<?=$c['parent']?>"><?=$c['nombre']?></a></li>
 <?  
             }
 ?>

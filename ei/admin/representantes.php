@@ -295,7 +295,7 @@ require_once("../includes/config.php");//agregue
 				console.log(lat,lng);
 				$('#coordenadas_gmap').val(lat+','+lng);
 			} else {
-				alert("Geocode was not successful for the following reason: " + status);
+				//alert("Geocode was not successful for the following reason: " + status);
 			}
 		});
 	}

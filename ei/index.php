@@ -88,54 +88,23 @@
                 </div>
             </div>
             <div class="row">
+                <?$banner_horizontal = $db->fetch_all('SELECT * FROM banhor ORDER BY id DESC');
+                foreach($banner_horizontal as $bann){
+                    if($bann['activo']=1){?>
                 <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                    <a href="nivelacion.php">
+                    <a href="<?echo $bann['link']?>">
                         <div class="call-to-action">
                             <div class="content-call">
                                 <div class="more">+</div>
-                                <p>Nivelación Gratuita</p>
-                                <span>Conocé tu nivel</span>
+                                <p><?echo $bann['titulo']?></p>
+                                <span><?echo $bann['contenido']?></span>
                             </div>
-                            <img src="img/ft-call-to-action1.jpg" alt="">
+                            <img src="uploads/<? echo $bann['imagen']?>" alt="">
                         </div>
                     </a>
                 </div>
-                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                    <a href="libreria-portada.php">
-                        <div class="call-to-action">
-                            <div class="content-call">
-                                <div class="more">+</div>
-                                <p>Librería Idiomas</p>
-                                <span>Abierta al público</span>
-                            </div>
-                            <img src="img/ft-call-to-action2.jpg" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                    <a href="empresas.php">
-                        <div class="call-to-action">
-                            <div class="content-call">
-                                <div class="more">+</div>
-                                <p>Cursos para empresas</p>
-                                <span>Personalizados</span>
-                            </div>
-                            <img src="img/ft-call-to-action3.jpg" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                    <a href="traducciones.php">
-                        <div class="call-to-action">
-                            <div class="content-call">
-                                <div class="more">+</div>
-                                <p>Traducciones</p>
-                                <span>Todos los idiomas</span>
-                            </div>
-                            <img src="img/ft-call-to-action4.jpg" alt="" width="102" height="70">
-                        </div>
-                    </a>
-                </div>
+                <?} 
+            }?>
             </div>
             <div class="row padding-bottom-top">
                 <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 relative-novedades">
@@ -236,10 +205,15 @@
                 
                 </div>
                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                    <a href="http://educaidiomas.com.ar/examenes-celpe-bras.php" class="bancos"><img src="img/EXAMENES.jpg" alt=""></a>
-                    <a href="http://educaidiomas.com.ar/franquicias.php" class="bancos"><img src="img/franquicia-2.jpg" alt=""></a>
-                    <a href="http://educaidiomas.com.ar/cursos-online.php" class="bancos"><img src="img/ONLINE2.jpg" alt=""></a>
-                    <a href="https://www.facebook.com/insteducaidiomas?fref=ts" target="_blank" class="bancos last"><img src="img/ACB-2.jpg" alt=""></a>
+                    <?$banner_vertical = $db->fetch_all('SELECT * FROM banver ORDER BY id DESC');
+                    foreach($banner_vertical as $ban){
+                        if($ban['activo']=1){?>
+                            <a href="<? echo $ban['link']?>" class="bancos"><img src="uploads/<? echo $ban['imagen']?>" alt=""></a>
+                        <?}?>
+
+                    <!--LA ULTIMA
+                    <a href="" class="bancos last"><img src="img/tarjetas-1.jpg" alt=""></a>-->
+                    <?}?>
                 </div>
             </div>
         </div>

@@ -65,12 +65,13 @@
                                 <option value="" disabled selected >Idioma *</option>
                                 <option value="ruso">Portugués</option>
                                 <option value="ingles">Inglés</option>
-                                <option value="portugues">Francés</option>
-                                <option value="portugues">Chino</option>
-                                <option value="portugues">Japón</option>
-                                <option value="portugues">Alemán</option>
-                                <option value="portugues">Español</option>
-                                <option value="portugues">Ruso</option>
+                                <option value="italiano">Italiano</option>
+                                <option value="frances">Francés</option>
+                                <option value="chino">Chino</option>
+                                <option value="japon">Japón</option>
+                                <option value="aleman">Alemán</option>
+                                <option value="español">Español</option>
+                                <option value="ruso">Ruso</option>
                             </select>
                         </div>
                         <div class="form-group">

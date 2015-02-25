@@ -42,7 +42,7 @@
 					<p class="text margin-bottom-none">Consulte su representante más cercano.</p><br>
                     <div class="container-mapa">
                         <?/*include("mapa.php");*/?>
-                        <iframe src="https://www.google.com/maps/d/embed?mid=zmUopf-obA50.k-SAhFmfiHMM&z=3&output=html" width="607" height="422"></iframe>
+                        <iframe style="border-style:none" src="map.php" width="607" height="422"></iframe>
                         <!--<img src="img/mapa-representantes.jpg" alt="">-->
                     </div>
                     <p class="bajada-tn">El Instituto <span>Educa Idiomas</span>, junto a Aldeaglobal te permiten estudiar a distancia desde cualquier punto del país. Conocé nuestros centros tutoriales:</p>
@@ -52,8 +52,14 @@
                      <img src="img/filete3-centros.png" alt="" class="firulete-centro3">
 
                      <!-- CABA -->
-                        <?$repres = $db->fetch_all('SELECT * FROM representantes ORDER BY id DESC');?>
-                          <div class="panel panel-default">
+                        <?$repres = $db->fetch_all('SELECT * FROM representantes ORDER BY id DESC');
+                        $cabaCont = true;?>
+                          
+                          <?foreach ($repres as $re) {
+                            if ($re['activo']==1) {
+                              if ($re['provincia'] == "Caba" || $re['provincia'] == "CABA" || $re['provincia'] == "Capital" || $re['ciudad'] == "Caba" || $re['ciudad'] == "caba" || $re['ciudad'] == "Capital") {
+                                if ($cabaCont) {?>
+                              <div class="panel panel-default">
                                   <div class="panel-heading" role="tab" id="headingOne">
                                     <h4 class="panel-title">
                                       <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -61,26 +67,30 @@
                                       </a>
                                     </h4>
                                   </div>
-                          <?foreach ($repres as $re) {
-                            if ($re['activo']==1) {
-                              if ($re['provincia'] == "Caba" || $re['provincia'] == "CABA" || $re['provincia'] == "Capital" && $re['provincia'] == "Mar del Plata") {?>
                                   <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                                     <div class="panel-body">
+                                <?$cabaCont=false;}?>
                                       <div class="box2">
                                           <?=$re['nombre']." ".$re['direccion']." ".$re['ciudad'].". Tel. ".$re['telefono']?>
                                       </div>
-                                    </div>
-                                  </div>
-                              <?}
+                                <?}
                               }
-                            }
-                          ?>
-                          </div>
+                            }?>
+                            <?if (!$cabaCont) {?>
+                              </div>
+                                </div>
+                                  </div>
+                              <?}?>      
                       <!--FIN CABA-->
 
                       <!--PROVINCIA DE BUENOS AIRES-->
-                      <?$represe = $db->fetch_all('SELECT * FROM representantes ORDER BY id DESC'); // BASE DE DATOS CON REPRESENTANTES?>
-                        <div class="panel panel-default">
+                      <?$represe = $db->fetch_all('SELECT * FROM representantes ORDER BY id DESC'); // BASE DE DATOS CON REPRESENTANTES
+                      $provCont = true?>
+                        <?foreach ($represe as $ree) {
+                            if ($ree['activo'] == 1) {
+                            if ($ree['provincia'] == "Buenos Aires" /*&& $ree['ciudad']!= "Mar del Plata"*/) {
+                              if ($provCont) {?>
+                              <div class="panel panel-default">
                                 <div class="panel-heading" role="tab" id="headingTwo">
                                   <h4 class="panel-title">
                                     <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -90,23 +100,27 @@
                                 </div>
                                 <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                                   <div class="panel-body">
-                        <?foreach ($represe as $ree) {
-                            if ($ree['activo'] == 1) {
-                            if ($ree['provincia'] == "Buenos Aires" && $ree['ciudad']!= "Mar del Plata") {?>
+                                  <?$provCont=false;}?>
                                     <div class="box2">
                                         <?=$ree['nombre']." ".$ree['direccion']." ".$ree['ciudad'].". Tel. ".$ree['telefono']?>
                                     </div>                                   
                             <?}
                            }
-                          }
-                        ?>
-                                  </div>
+                          }if (!$provCont) {?>
+                                </div>
                             </div>
                         </div> 
+
+                          <?}?>
                       <!--FIN PROVINCIA DE BUENOS AIRES-->
 
                       <!--MENDOZA-->
-                      <?$represent = $db->fetch_all('SELECT * FROM representantes ORDER BY id DESC'); // BASE DE DATOS CON REPRESENTANTES?>
+                      <?$represent = $db->fetch_all('SELECT * FROM representantes ORDER BY id DESC'); // BASE DE DATOS CON REPRESENTANTES
+                      $mendCont = true;?>
+                        <?foreach ($represent as $reee) {
+                            if ($reee['activo']==1) {
+                              if ($reee['provincia'] == "Mendoza") {
+                                if ($mendCont) {?>
                               <div class="panel panel-default">
                                 <div class="panel-heading" role="tab" id="headingThree">
                                   <h4 class="panel-title">
@@ -117,19 +131,19 @@
                                 </div>
                                 <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                                   <div class="panel-body">
-                        <?foreach ($represent as $reee) {
-                            if ($reee['activo']==1) {
-                              if ($reee['provincia'] == "Mendoza") {?>
+                                  <?$mendCont=false;}?>
                                     <div class="box2 con-border">
                                         <?=$reee['nombre']." ".$reee['direccion'].". Tel. ".$reee['telefono']?>
                                     </div>    
                             <?}
                            }
                           }
-                        ?>
+                          if (!$mendCont) {?>
                                  </div>
                           </div> 
                         </div>
+                          <?}
+                        ?>
                         <!--FIN MENDOZA-->
                     </div>
 
